@@ -276,7 +276,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 ''D:\prog\vb\minuteAlarm\tmr3\src\..\bin\MinutesTimer_Vb6.exe
-
+' moving from http://sourceforge.net/ to http://code.google.com/p/sel2in-minutes-timer/
 Option Explicit
 Dim MY_ORIG_HT As Long
 Private Const APP_CAPTION As String = "Mintues Timer "
