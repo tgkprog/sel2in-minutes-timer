@@ -8,7 +8,6 @@ Begin VB.Form Form1
    ClientWidth     =   3855
    Icon            =   "mn.frx":0000
    LinkTopic       =   "Form1"
-   LockControls    =   -1  'True
    ScaleHeight     =   191
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   257
@@ -24,48 +23,77 @@ Begin VB.Form Form1
       BorderStyle     =   0  'None
       Height          =   3330
       Left            =   0
-      TabIndex        =   4
+      TabIndex        =   1
       Top             =   0
       Width           =   4575
-      Begin VB.CommandButton cmdHelpAbout 
+      Begin VB.CommandButton cmdOn 
          BackColor       =   &H00C0FFFF&
-         Height          =   375
-         Left            =   3600
-         MaskColor       =   &H0080FF80&
+         Caption         =   "&on"
+         Height          =   495
+         Left            =   126
+         MaskColor       =   &H00E0E0E0&
          Style           =   1  'Graphical
-         TabIndex        =   3
-         ToolTipText     =   "Help"
-         Top             =   2400
-         Width           =   185
+         TabIndex        =   12
+         ToolTipText     =   "On Alarm after entering minutes to count down to"
+         Top             =   480
+         Width           =   842
       End
-      Begin VB.CommandButton cmdTogControls 
-         Appearance      =   0  'Flat
-         BackColor       =   &H00C0FFFF&
+      Begin VB.TextBox txtMinutes 
          Height          =   375
-         Left            =   3600
-         MaskColor       =   &H00008080&
-         Style           =   1  'Graphical
-         TabIndex        =   8
-         ToolTipText     =   "Hide extra controls"
-         Top             =   1920
-         UseMaskColor    =   -1  'True
-         Width           =   185
+         Left            =   285
+         TabIndex        =   11
+         Text            =   "25"
+         ToolTipText     =   "Time in minutes, more than 60 is ok too - becomes hours"
+         Top             =   11
+         Width           =   525
+      End
+      Begin VB.TextBox txtSeconds 
+         Height          =   375
+         Left            =   1200
+         TabIndex        =   10
+         ToolTipText     =   "Time in seconds (optional, added to minutes. more than 60 is ok too)"
+         Top             =   11
+         Width           =   455
       End
       Begin VB.Frame frmExtraCntrls 
          BackColor       =   &H00C0FFFF&
          BorderStyle     =   0  'None
          ForeColor       =   &H00C0FFFF&
-         Height          =   1380
+         Height          =   1260
          Left            =   0
-         TabIndex        =   9
-         Top             =   1440
+         TabIndex        =   5
+         Top             =   1320
          Width           =   4095
+         Begin VB.CommandButton cmdTogControls 
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFFF&
+            Height          =   375
+            Left            =   3600
+            MaskColor       =   &H00008080&
+            Style           =   1  'Graphical
+            TabIndex        =   14
+            ToolTipText     =   "Hide extra controls"
+            Top             =   480
+            UseMaskColor    =   -1  'True
+            Width           =   185
+         End
+         Begin VB.CommandButton cmdHelpAbout 
+            BackColor       =   &H00C0FFFF&
+            Height          =   375
+            Left            =   3600
+            MaskColor       =   &H0080FF80&
+            Style           =   1  'Graphical
+            TabIndex        =   13
+            ToolTipText     =   "Help"
+            Top             =   960
+            Width           =   185
+         End
          Begin VB.CheckBox chkRepeat 
             BackColor       =   &H00C0FFFF&
             Caption         =   "repeat"
             Height          =   255
             Left            =   960
-            TabIndex        =   10
+            TabIndex        =   6
             ToolTipText     =   "If checked will reset the timer after it rings/ you stop it"
             Top             =   120
             Width           =   1455
@@ -75,7 +103,7 @@ Begin VB.Form Form1
             Caption         =   "&sound"
             Height          =   255
             Left            =   120
-            TabIndex        =   13
+            TabIndex        =   9
             ToolTipText     =   "Play Sound on alarm Click Help to know more"
             Top             =   120
             Width           =   1455
@@ -83,7 +111,7 @@ Begin VB.Form Form1
          Begin VB.TextBox Text2 
             Height          =   360
             Left            =   0
-            TabIndex        =   12
+            TabIndex        =   8
             ToolTipText     =   "Any text for reminder (optional)"
             Top             =   480
             Width           =   3495
@@ -91,7 +119,7 @@ Begin VB.Form Form1
          Begin VB.TextBox txtShell 
             Height          =   375
             Left            =   0
-            TabIndex        =   11
+            TabIndex        =   7
             Top             =   960
             Width           =   3495
          End
@@ -107,80 +135,68 @@ Begin VB.Form Form1
          Left            =   4320
          Top             =   1440
       End
-      Begin VB.TextBox Text1 
-         Height          =   375
-         Left            =   120
-         TabIndex        =   0
-         Text            =   "25"
-         ToolTipText     =   "Time in minutes"
-         Top             =   11
-         Width           =   975
-      End
       Begin VB.Timer Timer2 
          Enabled         =   0   'False
          Interval        =   260
          Left            =   4320
          Top             =   240
       End
-      Begin VB.CommandButton cmdOn 
-         BackColor       =   &H00C0FFFF&
-         Caption         =   "&on"
-         Height          =   495
-         Left            =   120
-         MaskColor       =   &H00E0E0E0&
-         Style           =   1  'Graphical
-         TabIndex        =   1
-         ToolTipText     =   "On Alarm after entering minutes to count down to"
-         Top             =   480
-         Width           =   855
-      End
       Begin VB.CommandButton cmdOff 
          BackColor       =   &H00C0FFFF&
          Caption         =   "&off"
          Height          =   495
-         Left            =   1080
+         Left            =   1067
          MaskColor       =   &H0080FF80&
          Style           =   1  'Graphical
-         TabIndex        =   2
+         TabIndex        =   0
          ToolTipText     =   "Off rining alarm or cancel set alarm"
          Top             =   480
-         Width           =   855
+         Width           =   720
+      End
+      Begin VB.Label Label1 
+         BackColor       =   &H00C0FFFF&
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   495
+         Left            =   120
+         TabIndex        =   2
+         Top             =   960
+         Width           =   3135
       End
       Begin VB.Label lblSearch 
          BackColor       =   &H008080FF&
          Caption         =   "Searching for sound files. Can take 3-4 minutes"
          Height          =   855
          Left            =   2280
-         TabIndex        =   7
+         TabIndex        =   4
          Top             =   240
          Width           =   1095
       End
       Begin VB.Image Image2 
          Height          =   495
-         Left            =   2760
+         Left            =   3240
          Top             =   600
          Width           =   495
       End
-      Begin VB.Label Label1 
-         BackColor       =   &H00C0FFFF&
-         Height          =   375
-         Left            =   120
-         TabIndex        =   5
-         Top             =   1080
-         Width           =   2175
-      End
       Begin VB.Image Image1 
-         Height          =   480
-         Left            =   2400
+         Height          =   495
+         Left            =   2880
          ToolTipText     =   "Alarm animation"
          Top             =   0
-         Width           =   675
+         Width           =   495
       End
       Begin VB.Label Label2 
          BackColor       =   &H00C0FFFF&
          Height          =   375
          Left            =   1680
-         TabIndex        =   6
+         TabIndex        =   3
          Top             =   0
          Width           =   615
       End
@@ -287,7 +303,7 @@ Private Declare Function PlaySound Lib "winmm.dll" _
  ByVal hModule As Long, ByVal dwFlags As Long) As Long
  
 Dim iStat As Long
-Dim mins As Long
+Dim iMins As Long, iSecs As Long
 Dim TempFile As String, BatchFile As String
 Dim snds(3) As String
 Dim iSndFileCntr  As Integer
@@ -349,24 +365,68 @@ getHelpText = " ~ * Simple applicatin to get a reminder." & vbNewLine _
 End Function
 
 Private Sub cmdOn_Click()
+On Local Error GoTo errh
 Timer1.Enabled = False
-Timer1.Interval = (60000)
-
-mins = Val(Text1) - 1
+Timer1.Interval = 60000
+txtMinutes = Val(txtMinutes)
+txtSeconds = Val(txtSeconds)
+If (txtMinutes < 0) Then txtMinutes = 1
+If (txtSeconds < 0) Then txtSeconds = 1
+If txtMinutes = 0 And txtSeconds = 0 Then txtSeconds = 25
+iMins = Val(txtMinutes) - 1
+iSecs = Val(txtSeconds) - 1
 iStat = -10
+Dim sMinsMsg
+Dim sSecsMsg
 
-Label1 = "At " & Format(Now, "hh:nn:ss") & " hrs timer for " & (mins + 1) & " minutes started"
-Label2 = mins + 1
+sMinsMsg = (iMins + 1) '& ' iSecs seconds
+If iMins = -1 Then
+    sMinsMsg = ""
+ElseIf iMins = 0 Then
+    sMinsMsg = "1 minute "
+Else
+    sMinsMsg = (iMins + 1) & " minutes "
+End If
+
+If iSecs = -1 Then
+    sSecsMsg = ""
+ElseIf iSecs = 0 Then
+    sSecsMsg = "1 second "
+Else
+    sSecsMsg = (iSecs + 1) & " seconds "
+End If
+Label1 = "At " & Format(Now, "hh:nn:ss") & " hrs timer for " & sMinsMsg & sSecsMsg & "started "
+Dim sSep2
+sSep2 = "with"
+If chkSnd.Value Then
+    Label1 = Label1 & "with sound "
+    sSep2 = "&&"
+End If
+If chkRepeat.Value Then
+    Label1 = Label1 & sSep2 & " repeat on"
+End If
+Label2 = (iMins + 1) & " " & (iSecs + 1)
 Timer1.Enabled = True
 Icon = Form2.Icon ' press on while ringing
+Err.Clear
+If Err.Number <> 0 Then
+errh:
+    MsgBox "Had a problem " & Err.Description, vbExclamation, APP_CAPTION & " Err#" & Err.Number
+End If
 End Sub
 
 Private Sub cmdOff_Click()
+On Local Error GoTo errh
 If Timer1.Enabled Then
 
     Label2 = "off"
 End If
 
+Err.Clear
+If Err.Number <> 0 Then
+errh:
+    MsgBox "Had a problem " & Err.Description, vbExclamation, APP_CAPTION & " Err#" & Err.Number
+End If
 iStat = -1
 alrmDone False
 
@@ -566,33 +626,33 @@ End If
 End Sub
 
 Private Sub mnuCopyHelp_Click()
-On Local Error GoTo errH
+On Local Error GoTo errh
 Clipboard.Clear
 Clipboard.SetText APP_CAPTION & vbNewLine & getHelpText & vbNewLine _
     & getAboutStr
 Err.Clear
 If Err.Number <> 0 Then
-errH:
+errh:
     MsgBox "Sorry, could not set clipboard, had a problem " & Err.Description, vbExclamation, APP_CAPTION & " Err#" & Err.Number
 End If
 End Sub
 
 Private Sub mnuDonation_Click()
-On Local Error GoTo errH
+On Local Error GoTo errh
 Call Shell(App.Path & "\Minutes_Alarm_Donate_To_Project.bat", vbMinimizedFocus)
 Err.Clear
 If Err.Number <> 0 Then
-errH:
+errh:
     MsgBox "Had a problem " & Err.Description, vbExclamation, APP_CAPTION & " Err#" & Err.Number
 End If
 End Sub
 
 Private Sub mnuEmail_Click()
-On Local Error GoTo errH
+On Local Error GoTo errh
 Call Shell(App.Path & "\e-Mail_Developer.bat")
 Err.Clear
 If Err.Number <> 0 Then
-errH:
+errh:
     MsgBox "Had a problem " & Err.Description, vbExclamation, APP_CAPTION & " Err#" & Err.Number
 End If
 
@@ -619,7 +679,8 @@ Private Sub mnuLoadRem_Click()
 On Local Error Resume Next
 Me.Text2 = GetSetting(App.EXEName, "Set", "rem", Me.Text2)
 txtShell = GetSetting(App.EXEName, "Set", "shl", txtShell)
-Text1 = GetSetting(App.EXEName, "Set", "time", Text1)
+txtMinutes = GetSetting(App.EXEName, "Set", "time", txtMinutes)
+txtSeconds = GetSetting(App.EXEName, "Set", "time-seconds", txtSeconds)
 End Sub
 
 Private Sub mnuMoreCompact_Click()
@@ -637,7 +698,7 @@ cmdOn_Click
 End Sub
 
 Private Sub mnuSaveAllPrefsDefalut_Click()
-On Local Error GoTo errH
+On Local Error GoTo errh
 mnuSaveRem_Click
 Call SaveSetting(App.EXEName, "Set", "rngFile", sRngFile)
 Call SaveSetting(App.EXEName, "Set", "soundEnabled", chkSnd.Value)
@@ -646,14 +707,15 @@ Call SaveSetting(App.EXEName, "Set", "repeat", chkRepeat.Value)
 
 Err.Clear
 If Err.Number <> 0 Then
-errH:
+errh:
     Debug.Print Err.Number & " " & Err.Description
     Resume Next
 End If
 End Sub
 
 Private Sub mnuSaveRem_Click()
-Call SaveSetting(App.EXEName, "Set", "time", Text1)
+Call GetSetting(App.EXEName, "Set", "time-seconds", txtSeconds)
+Call SaveSetting(App.EXEName, "Set", "time", txtMinutes)
 Call SaveSetting(App.EXEName, "Set", "rem", Me.Text2)
 Call SaveSetting(App.EXEName, "Set", "shl", Me.txtShell)
 End Sub
@@ -681,7 +743,7 @@ shortCutAdd WshShell.SpecialFolders("Startup")
 End Sub
 
 Sub shortCutAdd(toFld As String)
-On Local Error GoTo errH
+On Local Error GoTo errh
 
 Dim WshShell
  Set WshShell = CreateObject("WScript.Shell")
@@ -695,14 +757,14 @@ sh.IconLocation = App.Path & "\" & App.EXEName & ".exe, 0"
 sh.Save
 Err.Clear
 If Err.Number <> 0 Then
-errH:
+errh:
     MsgBox "Had a problem " & Err.Description, vbExclamation, APP_CAPTION & " Err#" & Err.Number
 End If
 
 End Sub
 
 Private Sub mnuUnInstall_Click()
-On Local Error GoTo errH
+On Local Error GoTo errh
 Dim s, i, k, fl As Folder, fil As File
 i = MsgBox("Uninstall all? Press Cancel to stop, Yes to remove files and registry settings, No to only remove registry entries" _
     , vbYesNoCancel, APP_CAPTION & " Uninstall")
@@ -723,7 +785,7 @@ errHDel:
     Resume Next
 okDel:
 End If
-On Local Error GoTo errH
+On Local Error GoTo errh
 DeleteSetting App.EXEName, "Set"
 On Local Error Resume Next
 DeleteSetting App.EXEName, ""
@@ -733,18 +795,18 @@ MsgBox "Removed registry entries of '" & App.EXEName & "' now simply delete app 
 End
 Err.Clear
 If Err.Number <> 0 Then
-errH:
+errh:
     MsgBox "Try manual delete. Had a problem " & Err.Description, vbExclamation, APP_CAPTION & " Err#" & Err.Number
     Resume Next
 End If
 End Sub
 
 Private Sub mnuWebsite_Click()
-On Local Error GoTo errH
+On Local Error GoTo errh
 Call Shell(App.Path & "\Minutes_Alarm_Website.bat")
 Err.Clear
 If Err.Number <> 0 Then
-errH:
+errh:
     MsgBox "Had a problem " & Err.Description, vbExclamation, APP_CAPTION & " Err#" & Err.Number
 End If
 End Sub
@@ -752,23 +814,33 @@ End Sub
 
 
 Private Sub Timer1_Timer()
-On Local Error GoTo errH
-If iStat = -10 And mins > 0 Then
-    Label2 = mins
-    mins = mins - 1
+On Local Error GoTo errh
+If iStat = -10 And iMins > 0 Then
+    Label2 = iMins
+    iMins = iMins - 1
     
     Exit Sub
 End If
-If iStat = -10 And mins = 0 Then
+If iStat = -10 And iMins = 0 Then
+
+    If iSecs > 0 Then
+        If Timer1.Interval > 1000 Then
+            Timer1.Interval = 1000
+            Exit Sub
+        Else
+            iSecs = iSecs - 1
+            Exit Sub
+        End If
+    End If
+    Timer1.Interval = 1000
     If txtShell <> "" Then
         On Error Resume Next
         Shell txtShell, vbNormalFocus
     End If
-    On Local Error GoTo errH
+    On Local Error GoTo errh
     iStat = 60
-    Timer1.Interval = 1000
+    'Timer1.Interval = 1000
     Label2 = "a"
-    
 Else
     If iStat > -1 Then
         Timer2.Enabled = True
@@ -800,7 +872,7 @@ Else
 End If
 Err.Clear
 If Err.Number <> 0 Then
-errH:
+errh:
  Debug.Print Err.Description
  Resume Next
 End If
@@ -924,7 +996,7 @@ Private Sub tmr_runOnce_Timer()
 Static irunOnce_state As Integer
 
 tmr_runOnce.Enabled = False
-On Local Error GoTo errH
+On Local Error GoTo errh
 Dim spath
 Dim fso As FileSystemObject
 Dim fl1 As Folder, fldr2 As Folder
@@ -970,7 +1042,7 @@ If Not fso.FileExists(App.Path & "\Minutes_Alarm_Donate_To_Project.bat") Then
 End If
 Err.Clear
 If Err.Number <> 0 Then
-errH:
+errh:
     MsgBox "Had a problem " & Err.Description, vbExclamation, APP_CAPTION & " Err#" & Err.Number
 End If
 
