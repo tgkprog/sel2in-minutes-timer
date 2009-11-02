@@ -30,7 +30,7 @@ End
 End Sub
 
 Sub notifyNet()
-On Local Error GoTo errH
+On Local Error GoTo errh
 Set fso = New FileSystemObject
 lops = 5
 slp = 500
@@ -49,7 +49,7 @@ read1
 
 Err.Clear
 If Err.Number <> 0 Then
-errH:
+errh:
 End If
 End Sub
 ''"http://www.lifegateway.com/post/c.php|6|20000"
@@ -89,7 +89,7 @@ While Ret > 0 And rtn2 = 1
     DoEvents
     Sleep 33
     DoEvents
-    'f.Text1 = f.Text1 & vbNewLine & " number read " & Ret & " rtn2 " & rtn2
+    'f.txtMinutes = f.txtMinutes & vbNewLine & " number read " & Ret & " rtn2 " & rtn2
     DoEvents
     'f.Refresh
     DoEvents
@@ -106,7 +106,7 @@ Form1.tmrInet.Enabled = True
 
 Err.Clear
 If Err.Number <> 0 Then
-errH:
+errh:
     Dim tx2 As TextStream
     'MsgBox "Err " & Err.Number & " " & Err.Description & vbNewLine
     Set tx2 = fso.OpenTextFile(App.Path & "\errs.log", ForAppending, True)
