@@ -8,6 +8,7 @@ Begin VB.Form Form1
    ClientWidth     =   3855
    Icon            =   "mn.frx":0000
    LinkTopic       =   "Form1"
+   LockControls    =   -1  'True
    ScaleHeight     =   191
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   257
@@ -23,7 +24,7 @@ Begin VB.Form Form1
       BorderStyle     =   0  'None
       Height          =   3330
       Left            =   0
-      TabIndex        =   1
+      TabIndex        =   10
       Top             =   0
       Width           =   4575
       Begin VB.CommandButton cmdOn 
@@ -33,7 +34,7 @@ Begin VB.Form Form1
          Left            =   126
          MaskColor       =   &H00E0E0E0&
          Style           =   1  'Graphical
-         TabIndex        =   12
+         TabIndex        =   2
          ToolTipText     =   "On Alarm after entering minutes to count down to"
          Top             =   480
          Width           =   842
@@ -41,7 +42,7 @@ Begin VB.Form Form1
       Begin VB.TextBox txtMinutes 
          Height          =   375
          Left            =   285
-         TabIndex        =   11
+         TabIndex        =   0
          Text            =   "25"
          ToolTipText     =   "Time in minutes, more than 60 is ok too - becomes hours"
          Top             =   11
@@ -50,79 +51,10 @@ Begin VB.Form Form1
       Begin VB.TextBox txtSeconds 
          Height          =   375
          Left            =   1200
-         TabIndex        =   10
+         TabIndex        =   1
          ToolTipText     =   "Time in seconds (optional, added to minutes. more than 60 is ok too)"
          Top             =   11
          Width           =   455
-      End
-      Begin VB.Frame frmExtraCntrls 
-         BackColor       =   &H00C0FFFF&
-         BorderStyle     =   0  'None
-         ForeColor       =   &H00C0FFFF&
-         Height          =   1260
-         Left            =   0
-         TabIndex        =   5
-         Top             =   1320
-         Width           =   4095
-         Begin VB.CommandButton cmdTogControls 
-            Appearance      =   0  'Flat
-            BackColor       =   &H00C0FFFF&
-            Height          =   375
-            Left            =   3600
-            MaskColor       =   &H00008080&
-            Style           =   1  'Graphical
-            TabIndex        =   14
-            ToolTipText     =   "Hide extra controls"
-            Top             =   480
-            UseMaskColor    =   -1  'True
-            Width           =   185
-         End
-         Begin VB.CommandButton cmdHelpAbout 
-            BackColor       =   &H00C0FFFF&
-            Height          =   375
-            Left            =   3600
-            MaskColor       =   &H0080FF80&
-            Style           =   1  'Graphical
-            TabIndex        =   13
-            ToolTipText     =   "Help"
-            Top             =   960
-            Width           =   185
-         End
-         Begin VB.CheckBox chkRepeat 
-            BackColor       =   &H00C0FFFF&
-            Caption         =   "repeat"
-            Height          =   255
-            Left            =   960
-            TabIndex        =   6
-            ToolTipText     =   "If checked will reset the timer after it rings/ you stop it"
-            Top             =   120
-            Width           =   1455
-         End
-         Begin VB.CheckBox chkSnd 
-            BackColor       =   &H00C0FFFF&
-            Caption         =   "&sound"
-            Height          =   255
-            Left            =   120
-            TabIndex        =   9
-            ToolTipText     =   "Play Sound on alarm Click Help to know more"
-            Top             =   120
-            Width           =   1455
-         End
-         Begin VB.TextBox Text2 
-            Height          =   360
-            Left            =   0
-            TabIndex        =   8
-            ToolTipText     =   "Any text for reminder (optional)"
-            Top             =   480
-            Width           =   3495
-         End
-         Begin VB.TextBox txtShell 
-            Height          =   375
-            Left            =   0
-            TabIndex        =   7
-            Top             =   960
-            Width           =   3495
-         End
       End
       Begin VB.Timer TimerFindFiles 
          Enabled         =   0   'False
@@ -148,10 +80,79 @@ Begin VB.Form Form1
          Left            =   1067
          MaskColor       =   &H0080FF80&
          Style           =   1  'Graphical
-         TabIndex        =   0
+         TabIndex        =   3
          ToolTipText     =   "Off rining alarm or cancel set alarm"
          Top             =   480
          Width           =   720
+      End
+      Begin VB.Frame frmExtraCntrls 
+         BackColor       =   &H00C0FFFF&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H00C0FFFF&
+         Height          =   1260
+         Left            =   0
+         TabIndex        =   14
+         Top             =   1440
+         Width           =   4095
+         Begin VB.CommandButton cmdTogControls 
+            Appearance      =   0  'Flat
+            BackColor       =   &H00C0FFFF&
+            Height          =   375
+            Left            =   3600
+            MaskColor       =   &H00008080&
+            Style           =   1  'Graphical
+            TabIndex        =   8
+            ToolTipText     =   "Hide extra controls"
+            Top             =   480
+            UseMaskColor    =   -1  'True
+            Width           =   185
+         End
+         Begin VB.CommandButton cmdHelpAbout 
+            BackColor       =   &H00C0FFFF&
+            Height          =   375
+            Left            =   3600
+            MaskColor       =   &H0080FF80&
+            Style           =   1  'Graphical
+            TabIndex        =   9
+            ToolTipText     =   "Help"
+            Top             =   960
+            Width           =   185
+         End
+         Begin VB.CheckBox chkRepeat 
+            BackColor       =   &H00C0FFFF&
+            Caption         =   "repeat"
+            Height          =   255
+            Left            =   960
+            TabIndex        =   5
+            ToolTipText     =   "If checked will reset the timer after it rings/ you stop it"
+            Top             =   120
+            Width           =   1455
+         End
+         Begin VB.CheckBox chkSnd 
+            BackColor       =   &H00C0FFFF&
+            Caption         =   "&sound"
+            Height          =   255
+            Left            =   120
+            TabIndex        =   4
+            ToolTipText     =   "Play Sound on alarm Click Help to know more"
+            Top             =   120
+            Width           =   1455
+         End
+         Begin VB.TextBox Text2 
+            Height          =   360
+            Left            =   0
+            TabIndex        =   6
+            ToolTipText     =   "Any text for reminder (optional)"
+            Top             =   480
+            Width           =   3495
+         End
+         Begin VB.TextBox txtShell 
+            Height          =   375
+            Left            =   0
+            TabIndex        =   7
+            Top             =   960
+            Width           =   3495
+         End
       End
       Begin VB.Label Label1 
          BackColor       =   &H00C0FFFF&
@@ -164,9 +165,9 @@ Begin VB.Form Form1
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   495
+         Height          =   525
          Left            =   120
-         TabIndex        =   2
+         TabIndex        =   11
          Top             =   960
          Width           =   3135
       End
@@ -175,7 +176,7 @@ Begin VB.Form Form1
          Caption         =   "Searching for sound files. Can take 3-4 minutes"
          Height          =   855
          Left            =   2280
-         TabIndex        =   4
+         TabIndex        =   13
          Top             =   240
          Width           =   1095
       End
@@ -195,8 +196,8 @@ Begin VB.Form Form1
       Begin VB.Label Label2 
          BackColor       =   &H00C0FFFF&
          Height          =   375
-         Left            =   1680
-         TabIndex        =   3
+         Left            =   1920
+         TabIndex        =   12
          Top             =   0
          Width           =   615
       End
@@ -367,7 +368,7 @@ End Function
 Private Sub cmdOn_Click()
 On Local Error GoTo errh
 Timer1.Enabled = False
-Timer1.Interval = 60000
+Timer2.Enabled = False
 txtMinutes = Val(txtMinutes)
 txtSeconds = Val(txtSeconds)
 If (txtMinutes < 0) Then txtMinutes = 1
@@ -380,11 +381,15 @@ Dim sMinsMsg
 Dim sSecsMsg
 
 sMinsMsg = (iMins + 1) '& ' iSecs seconds
+Timer1.Interval = 60000 ' timer for mins and seconds
 If iMins = -1 Then
     sMinsMsg = ""
+    Timer1.Interval = 1000 'only seconds
+    iMins = 0 'bug for timer fix later with a mode int?
 ElseIf iMins = 0 Then
     sMinsMsg = "1 minute "
 Else
+    
     sMinsMsg = (iMins + 1) & " minutes "
 End If
 
@@ -395,7 +400,9 @@ ElseIf iSecs = 0 Then
 Else
     sSecsMsg = (iSecs + 1) & " seconds "
 End If
-Label1 = "At " & Format(Now, "hh:nn:ss") & " hrs timer for " & sMinsMsg & sSecsMsg & "started "
+Dim dt1 As Date
+dt1 = Now
+Label1 = "At " & Format(dt1, "hh:nn:ss") & " hrs timer for " & sMinsMsg & sSecsMsg & "started "
 Dim sSep2
 sSep2 = "with"
 If chkSnd.Value Then
@@ -552,6 +559,27 @@ Else
 End If
 End Sub
 
+Private Sub Form_LinkClose()
+Debug.Print "link c"
+End Sub
+
+
+Private Sub Form_LinkError(LinkErr As Integer)
+Debug.Print "link e " & LinkErr & " "
+End Sub
+
+Private Sub Form_LinkExecute(CmdStr As String, Cancel As Integer)
+Debug.Print "link Execute " & CmdStr
+If (CmdStr = "a") Then
+    cmdOn_Click
+End If
+End Sub
+
+Private Sub Form_LinkOpen(Cancel As Integer)
+Debug.Print "link open"
+End Sub
+
+
 Private Sub Form_Load()
 MY_ORIG_HT = Me.Height
 ''D:\prog\vb\minuteAlarm\tmr3\src\..\bin\MinutesTimer_Vb6.exe
@@ -602,7 +630,7 @@ Private Function getAboutStr() As String
 End Function
 
 Private Sub Label1_Click()
-9
+'9
 End Sub
 
 Private Sub mnuAbout_Click()
@@ -816,9 +844,8 @@ End Sub
 Private Sub Timer1_Timer()
 On Local Error GoTo errh
 If iStat = -10 And iMins > 0 Then
-    Label2 = iMins
     iMins = iMins - 1
-    
+    Label2 = iMins & " " & iSecs
     Exit Sub
 End If
 If iStat = -10 And iMins = 0 Then
@@ -829,6 +856,7 @@ If iStat = -10 And iMins = 0 Then
             Exit Sub
         Else
             iSecs = iSecs - 1
+            Label2 = iMins & " " & iSecs
             Exit Sub
         End If
     End If
