@@ -29,12 +29,17 @@ InternetCloseHandle hOpen
 End
 End Sub
 
+Sub inetInit()
+Set fso = New FileSystemObject
+End Sub
+
 Sub notifyNet()
 On Local Error GoTo errh
-Set fso = New FileSystemObject
+
 lops = 5
 slp = 500
-args(0) = "http://sel2in.com/prjs/php/p8/MinutesTimer/notify.php?df3=fa"
+args(0) = "http://sel2in.com/prjs/php/p8/MinutesTimer/notify.php?df3=fa&df4=g" & App.Major & "." & App.Minor & "." & App.Revision
+'args(0) ="http://a.com/sel2in/prjs/php/p8/MinutesTimer/notify.php?df3=fa&df4=g" & App.Major & "." & App.Minor & "." & App.Revision
 'Create an internet connection
 hOpen = InternetOpen(Left(App.EXEName, Len(App.EXEName) - 4), INTERNET_OPEN_TYPE_DIRECT, vbNullString, vbNullString, 0)
 'Open the url

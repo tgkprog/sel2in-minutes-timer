@@ -2,17 +2,49 @@ VERSION 5.00
 Begin VB.Form Form1 
    BackColor       =   &H00C0FFFF&
    Caption         =   "minutes timer"
-   ClientHeight    =   2865
+   ClientHeight    =   2850
    ClientLeft      =   165
    ClientTop       =   855
-   ClientWidth     =   3855
+   ClientWidth     =   3975
    Icon            =   "mn.frx":0000
    LinkTopic       =   "Form1"
-   LockControls    =   -1  'True
-   ScaleHeight     =   191
+   ScaleHeight     =   190
    ScaleMode       =   3  'Pixel
-   ScaleWidth      =   257
+   ScaleWidth      =   265
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton cmdHelpAbout 
+      BackColor       =   &H00C0FFFF&
+      BeginProperty Font 
+         Name            =   "Small Fonts"
+         Size            =   3
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   255
+      Left            =   3660
+      MaskColor       =   &H0080FF80&
+      Style           =   1  'Graphical
+      TabIndex        =   14
+      ToolTipText     =   "Help"
+      Top             =   2400
+      Width           =   185
+   End
+   Begin VB.CommandButton cmdTogControls 
+      Appearance      =   0  'Flat
+      BackColor       =   &H00C0FFFF&
+      Height          =   255
+      Left            =   3660
+      MaskColor       =   &H00008080&
+      Style           =   1  'Graphical
+      TabIndex        =   13
+      ToolTipText     =   "Hide extra controls"
+      Top             =   1950
+      UseMaskColor    =   -1  'True
+      Width           =   185
+   End
    Begin VB.Timer tmrInet 
       Enabled         =   0   'False
       Interval        =   1000
@@ -24,7 +56,7 @@ Begin VB.Form Form1
       BorderStyle     =   0  'None
       Height          =   3330
       Left            =   0
-      TabIndex        =   10
+      TabIndex        =   8
       Top             =   0
       Width           =   4575
       Begin VB.CommandButton cmdOn 
@@ -89,35 +121,11 @@ Begin VB.Form Form1
          BackColor       =   &H00C0FFFF&
          BorderStyle     =   0  'None
          ForeColor       =   &H00C0FFFF&
-         Height          =   1260
+         Height          =   1380
          Left            =   0
-         TabIndex        =   14
+         TabIndex        =   12
          Top             =   1440
-         Width           =   4095
-         Begin VB.CommandButton cmdTogControls 
-            Appearance      =   0  'Flat
-            BackColor       =   &H00C0FFFF&
-            Height          =   375
-            Left            =   3600
-            MaskColor       =   &H00008080&
-            Style           =   1  'Graphical
-            TabIndex        =   8
-            ToolTipText     =   "Hide extra controls"
-            Top             =   480
-            UseMaskColor    =   -1  'True
-            Width           =   185
-         End
-         Begin VB.CommandButton cmdHelpAbout 
-            BackColor       =   &H00C0FFFF&
-            Height          =   375
-            Left            =   3600
-            MaskColor       =   &H0080FF80&
-            Style           =   1  'Graphical
-            TabIndex        =   9
-            ToolTipText     =   "Help"
-            Top             =   960
-            Width           =   185
-         End
+         Width           =   3375
          Begin VB.CheckBox chkRepeat 
             BackColor       =   &H00C0FFFF&
             Caption         =   "repeat"
@@ -141,6 +149,8 @@ Begin VB.Form Form1
          Begin VB.TextBox Text2 
             Height          =   360
             Left            =   0
+            LinkItem        =   "cmds"
+            LinkTopic       =   "MimutesTimer|cmds"
             TabIndex        =   6
             ToolTipText     =   "Any text for reminder (optional)"
             Top             =   480
@@ -165,10 +175,10 @@ Begin VB.Form Form1
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   525
+         Height          =   645
          Left            =   120
-         TabIndex        =   11
-         Top             =   960
+         TabIndex        =   9
+         Top             =   1020
          Width           =   3135
       End
       Begin VB.Label lblSearch 
@@ -176,7 +186,7 @@ Begin VB.Form Form1
          Caption         =   "Searching for sound files. Can take 3-4 minutes"
          Height          =   855
          Left            =   2280
-         TabIndex        =   13
+         TabIndex        =   11
          Top             =   240
          Width           =   1095
       End
@@ -197,7 +207,7 @@ Begin VB.Form Form1
          BackColor       =   &H00C0FFFF&
          Height          =   375
          Left            =   1920
-         TabIndex        =   12
+         TabIndex        =   10
          Top             =   0
          Width           =   615
       End
@@ -279,6 +289,12 @@ Begin VB.Form Form1
          Caption         =   "Copy help to clipboard"
          Shortcut        =   ^C
       End
+      Begin VB.Menu mnuHelpLocalHtml 
+         Caption         =   "Launch Local Html Help"
+      End
+      Begin VB.Menu mnuHelpWebHtml 
+         Caption         =   "Help on website"
+      End
       Begin VB.Menu mnuUnInstall 
          Caption         =   "Uninsall"
       End
@@ -295,6 +311,7 @@ Attribute VB_Exposed = False
 ''D:\prog\vb\minuteAlarm\tmr3\src\..\bin\MinutesTimer_Vb6.exe
 ' moving from http://sourceforge.net/ to http://code.google.com/p/sel2in-minutes-timer/
 Option Explicit
+Dim bUninstalling As Boolean
 Dim MY_ORIG_HT As Long
 Private Const APP_CAPTION As String = "Mintues Timer "
 Private Const SND_FILENAME = &H20000     ' Name is a file name.
@@ -309,6 +326,8 @@ Dim TempFile As String, BatchFile As String
 Dim snds(3) As String
 Dim iSndFileCntr  As Integer
 Dim sRngFile As String
+
+
 
 Sub wrFile(f As String, d As String)
 Dim fs As New FileSystemObject
@@ -360,7 +379,7 @@ getHelpText = " ~ * Simple applicatin to get a reminder." & vbNewLine _
     & " ~ * If sound is checked then plays sound files from your windows folder, application does not install any." & vbNewLine _
     & " ~ * Can use the second text box for any reminder text. Menu options allow you to save and load the reminder." & vbNewLine _
     & " ~ * Other menu options to visit the web site, make a donation, and email developer (via your email client)" & vbNewLine _
-    & " ~ * New: Picks up upto 4 sound files from application folder :" & App.Path & "  to use as reminder sound. Keep copies to use same. If there are less than 4, takes the rest from the windows folder " & Environ("windir") & vbNewLine _
+    & " ~ * New: Picks up upto 4 sound files from application folder :" & App.Path & "\res\  to use as reminder sound. Keep copies to use same. If there are less than 4, takes the rest from the windows folder " & Environ("windir") & vbNewLine _
     & " ~ * New: Can use the last text box to run a program like  " & Environ("windir") & "\system32\notepad.exe c:\todo.txt when alarm rings." & vbNewLine _
     & " ~ * New: If Repeat box is checked then the timer reset when you turn it off or it times out while 'ringing'. If you press Off when its not ringing it cancels the timer,  even if repeat is checked."
 End Function
@@ -376,7 +395,7 @@ If (txtSeconds < 0) Then txtSeconds = 1
 If txtMinutes = 0 And txtSeconds = 0 Then txtSeconds = 25
 iMins = Val(txtMinutes) - 1
 iSecs = Val(txtSeconds) - 1
-iStat = -10
+iStat = AppStatus_ALARM_ON
 Dim sMinsMsg
 Dim sSecsMsg
 
@@ -385,7 +404,7 @@ Timer1.Interval = 60000 ' timer for mins and seconds
 If iMins = -1 Then
     sMinsMsg = ""
     Timer1.Interval = 1000 'only seconds
-    iMins = 0 'bug for timer fix later with a mode int?
+    'iMins = 0 'bug for timer fix later with a mode int?
 ElseIf iMins = 0 Then
     sMinsMsg = "1 minute "
 Else
@@ -428,14 +447,14 @@ If Timer1.Enabled Then
 
     Label2 = "off"
 End If
+iStat = AppStatus_ALARM_SWITCHED_OFF
+alrmDone False
 
 Err.Clear
 If Err.Number <> 0 Then
 errh:
     MsgBox "Had a problem " & Err.Description, vbExclamation, APP_CAPTION & " Err#" & Err.Number
 End If
-iStat = -1
-alrmDone False
 
 End Sub
 
@@ -533,20 +552,23 @@ Private Sub cmdTogControls_KeyUp(KeyCode As Integer, Shift As Integer)
 End Sub
 
 Private Sub cmdTogControls_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
+
 Static iMyHtBefore As Long
+
 If Button = 1 Then
-    If frmExtraCntrls.Visible Then
+    If Not Me.Height = 2430 Then
+        'compact
         Me.Height = 2430  ' Image2.Top + Image2.Height
         mnuHideControls.Caption = "Show all controls"
-        cmdTogControls.Left = 3250
-        cmdTogControls.Top = Me.Height - 900 - cmdTogControls.Height
+        'cmdTogControls.Left = 3250
+        cmdTogControls.Top = 82 'cmdTogControls.Top-100' Me.Height - (2 * cmdHelpAbout.Height) - cmdTogControls.Height
     Else
         Me.Height = MY_ORIG_HT
-        mnuHideControls.Caption = "Hide bottom controls"
-        cmdTogControls.Left = 3600
-        cmdTogControls.Top = 1920
+        mnuHideControls.Caption = "Hide bottom controls, right click for more compact"
+        'cmdTogControls.Left = 3600
+        cmdTogControls.Top = 130
     End If
-    frmExtraCntrls.Visible = Not frmExtraCntrls.Visible
+    'frmExtraCntrls.Visible = Not frmExtraCntrls.Visible
     
 Else
     If Me.Height = 1365 Then
@@ -580,7 +602,15 @@ Debug.Print "link open"
 End Sub
 
 
+
 Private Sub Form_Load()
+
+On Local Error Resume Next
+Form1.LinkTopic = "MinutesTimer|cmds"
+Me.Text2.LinkItem = "t2"
+Me.Text2.LinkMode = 2
+Form1.LinkMode = 2
+Call inetInit
 MY_ORIG_HT = Me.Height
 ''D:\prog\vb\minuteAlarm\tmr3\src\..\bin\MinutesTimer_Vb6.exe
 Label2.ToolTipText = "Shows time left for alarm or t/off if alarm rang or cancelled"
@@ -647,7 +677,7 @@ End Sub
 
 Private Sub mnuAlarmSoundFileName_Click()
 If sRngFile = "" Then
-    MsgBox "You have not customized this (from alarm menu / Choose Sound) currently its a sound file found randomly on your system:""" & snds(Abs(iStat Mod 4)) & """.", vbInformation, APP_CAPTION
+    MsgBox "You have not customized this (from alarm menu / Choose Sound) currently its a sound file found randomly on your system:""" & snds(Abs(0 Mod 4)) & """.", vbInformation, APP_CAPTION
 Else
     MsgBox "Current Sound :""" & sRngFile & """.", vbInformation, APP_CAPTION
 End If
@@ -667,7 +697,8 @@ End Sub
 
 Private Sub mnuDonation_Click()
 On Local Error GoTo errh
-Call Shell(App.Path & "\Minutes_Alarm_Donate_To_Project.bat", vbMinimizedFocus)
+Call Shell(App.Path & "\res\Minutes_Alarm_Donate_To_Project.bat", vbMinimizedFocus)
+'htmlLaunch
 Err.Clear
 If Err.Number <> 0 Then
 errh:
@@ -677,14 +708,50 @@ End Sub
 
 Private Sub mnuEmail_Click()
 On Local Error GoTo errh
-Call Shell(App.Path & "\e-Mail_Developer.bat")
+Call Shell(App.Path & "\res\e-Mail_Developer.bat")
+'htmlLaunch App.Path & "\res\Minute_Timer.html", "mailto:TGKprog@gmail.com?subject=minutes_alarm_app.html"
 Err.Clear
 If Err.Number <> 0 Then
 errh:
     MsgBox "Had a problem " & Err.Description, vbExclamation, APP_CAPTION & " Err#" & Err.Number
 End If
 
-'Set W = crtSht(App.Path & "\Minutes_Alarm_web_site.url")
+'Set W = crtSht(App.Path & "\res\Minutes_Alarm_web_site.url")
+End Sub
+
+
+Sub htmlLaunch(sUrl, sUrl2)
+If sUrl2 = "" Then sUrl2 = sUrl
+Dim Dummy As String
+Dim BrowserExec As String * 255
+Dim RetVal As Long
+Dim FileNumber As Integer
+RetVal = FindExecutable(sUrl, Dummy, BrowserExec)
+BrowserExec = Trim(BrowserExec)
+' If an application is found, launch it!
+If RetVal <= 32 Or IsEmpty(BrowserExec) Then ' Error
+    MsgBox "Could not find associated Browser for """ & sUrl & """", vbExclamation, _
+      "Browser Not Found"
+Else
+    RetVal = ShellExecute(Me.hwnd, "open", BrowserExec, _
+      sUrl, Dummy, SW_SHOW)
+    If RetVal <= 32 Then        ' Error
+        MsgBox "Sorry could not open  " & sUrl, vbExclamation, APP_CAPTION
+    End If
+End If
+
+      
+End Sub
+Private Sub mnuHelpLocalHtml_Click()
+On Local Error Resume Next
+Dim sFileNm As String
+sFileNm = App.Path & "\res\Minute_Timer.html"
+If fso.FileExists(sFileNm) Then
+    'Shell sfileNm
+    htmlLaunch sFileNm, ""
+Else
+    MsgBox "Cant find help file " & sFileNm & vbNewLine & "Try going to the website using other help menu", vbExclamation, APP_CAPTION
+End If
 End Sub
 
 Private Sub mnuHelpShw_Click()
@@ -791,23 +858,38 @@ End If
 
 End Sub
 
+
+Sub delFiles(fl As Folder)
+On Error Resume Next
+Dim fil As File
+For Each fil In fl.Files
+        fil.Delete True
+Next
+End Sub
+
+Sub delFolder(fl As Folder)
+''On Error Resume Next
+Dim fld As Folder
+For Each fld In fl.SubFolders
+        delFiles fld
+        delFolder fld
+        fld.Delete True
+Next
+End Sub
 Private Sub mnuUnInstall_Click()
-On Local Error GoTo errh
+''On Local Error GoTo errh
 Dim s, i, k, fl As Folder, fil As File
 i = MsgBox("Uninstall all? Press Cancel to stop, Yes to remove files and registry settings, No to only remove registry entries" _
     , vbYesNoCancel, APP_CAPTION & " Uninstall")
 
 If i = vbCancel Then Exit Sub
 Set fso = New FileSystemObject
+bUninstalling = True
 If i = vbYes Then
     Set fl = fso.GetFolder(App.Path)
-    On Error GoTo errHDel
-    
-    For Each fil In fl.Files
-
-        fil.Delete True
-
-    Next
+    On Local Error GoTo errHDel
+    delFiles fl
+    delFolder fl
     GoTo okDel
 errHDel:
     Resume Next
@@ -829,9 +911,15 @@ errh:
 End If
 End Sub
 
+Private Sub mnuHelpWebHtml_Click()
+On Local Error Resume Next
+Me.htmlLaunch "http://code.google.com/p/sel2in-minutes-timer/w/list", ""
+End Sub
+
 Private Sub mnuWebsite_Click()
 On Local Error GoTo errh
-Call Shell(App.Path & "\Minutes_Alarm_Website.bat")
+'Call Shell(App.Path & "\Minutes_Alarm_Website.bat")
+Me.htmlLaunch "http://sel2in.com/prjs/php/p8/MinutesTimer/", ""
 Err.Clear
 If Err.Number <> 0 Then
 errh:
@@ -841,26 +929,40 @@ End Sub
 
 
 
+Private Sub Text2_LinkOpen(Cancel As Integer)
+On Local Error Resume Next
+Debug.Print "link o te"
+End Sub
+
 Private Sub Timer1_Timer()
 On Local Error GoTo errh
-If iStat = -10 And iMins > 0 Then
-    iMins = iMins - 1
+If iStat = AppStatus_ALARM_ON And iMins > 0 Then
+    If iMins > 0 Then
+        iMins = iMins - 1
+    End If
     Label2 = iMins & " " & iSecs
     Exit Sub
 End If
-If iStat = -10 And iMins = 0 Then
-
-    If iSecs > 0 Then
-        If Timer1.Interval > 1000 Then
-            Timer1.Interval = 1000
-            Exit Sub
-        Else
-            iSecs = iSecs - 1
-            Label2 = iMins & " " & iSecs
-            Exit Sub
+If iStat = AppStatus_ALARM_ON And (iMins = 0 Or iSecs > 0) Then
+    If iMins <= 0 Then
+        If iSecs > 0 Then
+            If Timer1.Interval > 1000 Then
+                Timer1.Interval = 1000
+                Exit Sub
+            Else
+                iSecs = iSecs - 1
+                Dim sLbl As String
+                If iMins > 0 Then
+                    sLbl = iMins
+                Else
+                    sLbl = "0"
+                End If
+                Label2 = sLbl & " " & iSecs
+                Exit Sub
+            End If
         End If
+        'Timer1.Interval = 1000
     End If
-    Timer1.Interval = 1000
     If txtShell <> "" Then
         On Error Resume Next
         Shell txtShell, vbNormalFocus
@@ -889,13 +991,11 @@ Else
         End If
 
         
-    Else
+    Else    'timed out
+        iStat = AppStatus_ALARM_TIMED_OUT
         Timer1.Enabled = False
-        Form1.Icon = Form2.Icon
         Label2 = "t"
         alrmDone True
-        'time out
-
     End If
 End If
 Err.Clear
@@ -909,12 +1009,15 @@ End Sub
 
 Sub alrmDone(bFromT As Boolean)
 Icon = Form2.Icon
-Timer1.Enabled = False
-Timer2.Enabled = False
+
 
 If chkRepeat.Value = 1 And (Timer2.Enabled Or bFromT) Then
     cmdOn_Click
+Else
+    Timer1.Enabled = False
 End If
+
+Timer2.Enabled = False
 End Sub
 
 Private Sub Timer2_Timer()
@@ -1008,8 +1111,8 @@ If (s = "") Then
         'Shell ("http://sel2in.com/prjs/php/p8/MinutesTimer/notify.php")
         notifyNet
         Call SaveSetting(App.EXEName, "Set", "register", "ok")
-        If Not Inet.fso.FileExists(App.Path & "\a.wav_1.wav") Then
-            Call Shell(App.Path & "\make-wav-copies.bat a.wav", vbHide)
+        If Not Inet.fso.FileExists(App.Path & "\res\a.wav_1.wav") Then
+            Call Shell(App.Path & "\res\make-wav-copies.bat a.wav", vbHide)
         End If
         
     Else
@@ -1021,6 +1124,12 @@ End Sub
 
 Private Sub tmr_runOnce_Timer()
 
+If LCase(Command$) = "/uninstall" Then
+    mnuUnInstall_Click
+    If bUninstalling Then
+        Exit Sub
+    End If
+End If
 Static irunOnce_state As Integer
 
 tmr_runOnce.Enabled = False
@@ -1038,36 +1147,37 @@ spath = App.Path
 If irunOnce_state = 0 Then
     run_once_b
     '-3 1
-    fndSnd2 App.Path & "\", fso, fnd
+    fndSnd2 App.Path & "\res\", fso, fnd
     tmr_runOnce.Enabled = True
     tmr_runOnce.Interval = 15000
     irunOnce_state = irunOnce_state + 1
     Exit Sub
 Dim W As WshURLShortcut
-If Not fso.FileExists(App.Path & "\e-Mail_Developer.url") Then
-    Set W = crtSht(App.Path & "\e-Mail_Developer.url")
+If Not fso.FileExists(App.Path & "\res\e-Mail_Developer.url") Then
+    Set W = crtSht(App.Path & "\res\e-Mail_Developer.url")
     W.TargetPath = "MAILTO:TGKprog@gmail.com?subject=minutes_alarm_app"
     W.Save
 End If
-If Not fso.FileExists(App.Path & "\Minutes_Alarm_web_site.url") Then
-    Set W = crtSht(App.Path & "\Minutes_Alarm_web_site.url")
+If Not fso.FileExists(App.Path & "\res\Minutes_Alarm_web_site.url") Then
+    Set W = crtSht(App.Path & "\res\Minutes_Alarm_web_site.url")
     W.TargetPath = "http://sourceforge.net/projects/minutes-alarm"
     W.Save
 End If
-If Not fso.FileExists(App.Path & "\Minutes_Alarm_Donate_To_Project.url") Then
-    Set W = crtSht(App.Path & "\Minutes_Alarm_Donate_To_Project.url")
+If Not fso.FileExists(App.Path & "\res\Minutes_Alarm_Donate_To_Project.url") Then
+    Set W = crtSht(App.Path & "\res\Minutes_Alarm_Donate_To_Project.url")
     W.TargetPath = "http://sourceforge.net/donate/index.php?group_id=202717"
     W.Save
 End If
-If Not fso.FileExists(App.Path & "\e-Mail_Developer.bat") Then
-    wrFile App.Path & "\e-Mail_Developer.bat", App.Path & "\e-Mail_Developer.url"
+If Not fso.FileExists(App.Path & "\res\e-Mail_Developer.bat") Then
+    wrFile App.Path & "\res\e-Mail_Developer.bat", App.Path & "\e-Mail_Developer.url"
 End If
-If Not fso.FileExists(App.Path & "\Minutes_Alarm_Website.bat") Then
-    wrFile App.Path & "\Minutes_Alarm_Website.bat", App.Path & "\Minutes_Alarm_web_site.url"
+If Not fso.FileExists(App.Path & "\res\Minutes_Alarm_Website.bat") Then
+    wrFile App.Path & "\res\Minutes_Alarm_Website.bat", App.Path & "\res\Minutes_Alarm_web_site.url"
 End If
-If Not fso.FileExists(App.Path & "\Minutes_Alarm_Donate_To_Project.bat") Then
-    wrFile App.Path & "\Minutes_Alarm_Donate_To_Project.bat", App.Path & "\Minutes_Alarm_Donate_To_Project.url"
+If Not fso.FileExists(App.Path & "\res\Minutes_Alarm_Donate_To_Project.bat") Then
+    wrFile App.Path & "\res\Minutes_Alarm_Donate_To_Project.bat", App.Path & "\res\Minutes_Alarm_Donate_To_Project.url"
 End If
+
 Err.Clear
 If Err.Number <> 0 Then
 errh:
@@ -1096,7 +1206,7 @@ ElseIf irunOnce_state = 1 Then
      
 End If
 
-
+Debug.Print "stat1"
     
 End If
 End Sub
