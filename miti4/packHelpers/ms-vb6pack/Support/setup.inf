@@ -1,0 +1,44 @@
+;*** BEGIN **********************************************************
+;**                                                                **
+;** Automatically generated on: Mon Nov 09 11:50:37 2009           **
+;**                                                                **
+;** MakeCAB Version: (32) 1.00.0600 (11/22/96)                     **
+;**                                                                **
+;*** BEGIN **********************************************************
+[disk list]
+1,Disk 1
+[cabinet list]
+1,1,MinutesTimer_Vb6.CAB
+[file list]
+1,0,Setup.Lst,4902
+1,0,setup.exe,140800
+1,1,MinutesTimer_Vb6.exe,106496
+1,1,msvbvm60.dll,1384479
+1,1,oleaut32.dll,551936
+1,1,olepro32.dll,84992
+1,1,asycfilt.dll,65024
+1,1,stdole2.tlb,16896
+1,1,COMCAT.DLL,22288
+1,1,wininet.dll,818688
+1,1,scrrun.dll,172032
+1,1,msvcrt.dll,343040
+1,1,wshom.ocx,135168
+1,1,SETUP1.EXE,286720
+1,1,VB6STKIT.DLL,102912
+1,1,ST6UNST.EXE,73216
+1,1,a2.wav,67642
+1,1,a.wav,67642
+1,1,make-wav-copies.bat,220
+1,1,readme res.txt,217
+1,1,Minute_Timer.html,14989
+1,1,e-Mail_Developer.bat,49
+1,1,Minutes_Alarm_Donate_To_Project.bat,64
+1,1,Minutes_Alarm_Website.bat,55
+1,1,tmr1.ico,766
+1,1,tmr2.ico,766
+1,1,tmr3.ico,766
+;*** END ************************************************************
+;**                                                                **
+;** Automatically generated on: Mon Nov 09 11:50:37 2009           **
+;**                                                                **
+;*** END ************************************************************
