@@ -311,6 +311,7 @@ Attribute VB_Exposed = False
 ''D:\prog\vb\minuteAlarm\tmr3\src\..\bin\MinutesTimer_Vb6.exe
 ' moving from http://sourceforge.net/ to http://code.google.com/p/sel2in-minutes-timer/
 Option Explicit
+Public sHelpText As String
 Dim bUninstalling As Boolean
 Dim MY_ORIG_HT As Long
 Private Const APP_CAPTION As String = "Mintues Timer "
@@ -367,8 +368,7 @@ End If
 End Function
 
 Private Sub cmdHelpAbout_Click()
-    MsgBox getHelpText & vbNewLine _
-    & getAboutStr, vbInformation, APP_CAPTION
+mnuHelpShw_Click
     
     '& " ~ * Tip: Have XP and do not want 2 in." & vbNewLine
 End Sub
@@ -376,7 +376,7 @@ End Sub
 Public Function getHelpText() As String
 getHelpText = " ~ * Simple applicatin to get a reminder." & vbNewLine _
     & " ~ * Enter time in minutes in the first text box (whole number 1 to 32000) and click On. Info shows when the alarm was started and how many minutes." & vbNewLine _
-    & " ~ * If sound is checked then plays sound files from your windows folder, application does not install any." & vbNewLine _
+    & " ~ * If sound is checked then plays sound files from your app folder or windows folder" & vbNewLine _
     & " ~ * Can use the second text box for any reminder text. Menu options allow you to save and load the reminder." & vbNewLine _
     & " ~ * Other menu options to visit the web site, make a donation, and email developer (via your email client)" & vbNewLine _
     & " ~ * New: Picks up upto 4 sound files from application folder :" & App.Path & "\res\  to use as reminder sound. Keep copies to use same. If there are less than 4, takes the rest from the windows folder " & Environ("windir") & vbNewLine _
@@ -601,7 +601,27 @@ Private Sub Form_LinkOpen(Cancel As Integer)
 Debug.Print "link open"
 End Sub
 
+Sub initHelp()
+Dim fso As FileSystemObject
+Dim fl1 As Folder, fldr2 As Folder
+Dim File1 As File, file2 As File
+Dim i, fnd As Integer
+Dim tx As TextStream
+On Local Error GoTo errh
+sHelpText = ""
+Set fso = New FileSystemObject
+Set tx = fso.OpenTextFile(App.Path & "\res\help.txt", ForReading)
 
+sHelpText = tx.ReadAll
+sHelpText = Replace(sHelpText, "/--{appFolder}--/", App.Path)
+sHelpText = Replace(sHelpText, "/--{windir}--/", Environ("windir"))
+tx.Close
+Exit Sub
+errh:
+If sHelpText = "" Then
+    sHelpText = getHelpText
+End If
+End Sub
 
 Private Sub Form_Load()
 
@@ -611,6 +631,7 @@ Me.Text2.LinkItem = "t2"
 Me.Text2.LinkMode = 2
 Form1.LinkMode = 2
 Call inetInit
+Call initHelp
 MY_ORIG_HT = Me.Height
 ''D:\prog\vb\minuteAlarm\tmr3\src\..\bin\MinutesTimer_Vb6.exe
 Label2.ToolTipText = "Shows time left for alarm or t/off if alarm rang or cancelled"
@@ -653,15 +674,12 @@ End Sub
 
 Private Function getAboutStr() As String
  getAboutStr = "By Tushar Kapila Copyright 2007-2009 tgkprog@gmail.com " & vbNewLine _
- & "Project web site http://sourceforge.net/projects/minutes-alarm" & vbNewLine _
+ & "Project web site http://code.google.com/p/sel2in-minutes-timer/" & vbNewLine _
  & "and  http://sel2in.com/prjs/php/p8/MinutesTimer/" & vbNewLine _
  & "Uninstall : Run the uninstall menu and simply delete all files in this apps folder" & vbNewLine _
  & "Version " & App.Major & "." & App.Minor & "." & App.Revision
 End Function
 
-Private Sub Label1_Click()
-'9
-End Sub
 
 Private Sub mnuAbout_Click()
 MsgBox getAboutStr, vbInformation, APP_CAPTION
@@ -683,7 +701,7 @@ Else
 End If
 End Sub
 
-Private Sub mnuCopyHelp_Click()
+Public Sub mnuCopyHelp_Click()
 On Local Error GoTo errh
 Clipboard.Clear
 Clipboard.SetText APP_CAPTION & vbNewLine & getHelpText & vbNewLine _
@@ -755,7 +773,9 @@ End If
 End Sub
 
 Private Sub mnuHelpShw_Click()
-cmdHelpAbout_Click
+'cmdHelpAbout_Click
+    Call Form2.shw(sHelpText & vbNewLine _
+    & getAboutStr) ', vbInformation, APP_CAPTION
 End Sub
 
 Private Sub mnuHideControls_Click()
@@ -1160,7 +1180,7 @@ If Not fso.FileExists(App.Path & "\res\e-Mail_Developer.url") Then
 End If
 If Not fso.FileExists(App.Path & "\res\Minutes_Alarm_web_site.url") Then
     Set W = crtSht(App.Path & "\res\Minutes_Alarm_web_site.url")
-    W.TargetPath = "http://sourceforge.net/projects/minutes-alarm"
+    W.TargetPath = "http://code.google.com/p/sel2in-minutes-timer/"
     W.Save
 End If
 If Not fso.FileExists(App.Path & "\res\Minutes_Alarm_Donate_To_Project.url") Then
