@@ -1,0 +1,1130 @@
+
+D:\prog\vb\minuteAlarm\g\mt2>for /R %a IN (.svn) DO dir %a 
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\.svn
+
+11/11/2009  06:35 AM             1,418 all-wcprops
+11/11/2009  06:35 AM             2,206 entries
+11/11/2009  11:02 AM    <DIR>          prop-base
+11/11/2009  11:02 AM    <DIR>          props
+11/11/2009  11:02 AM    <DIR>          text-base
+11/11/2009  11:02 AM    <DIR>          tmp
+               2 File(s)          3,624 bytes
+               4 Dir(s)   1,176,719,360 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn
+
+11/11/2009  06:35 AM               466 all-wcprops
+11/11/2009  06:35 AM               860 entries
+11/11/2009  11:02 AM    <DIR>          prop-base
+11/11/2009  11:02 AM    <DIR>          props
+11/11/2009  11:02 AM    <DIR>          text-base
+11/11/2009  11:02 AM    <DIR>          tmp
+               2 File(s)          1,326 bytes
+               4 Dir(s)   1,176,719,360 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\bin\res\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\docs\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\docs
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn
+
+11/11/2009  06:35 AM               616 all-wcprops
+11/11/2009  06:35 AM             1,052 entries
+11/11/2009  11:02 AM    <DIR>          prop-base
+11/11/2009  11:02 AM    <DIR>          props
+11/11/2009  11:02 AM    <DIR>          text-base
+11/11/2009  11:02 AM    <DIR>          tmp
+               2 File(s)          1,668 bytes
+               4 Dir(s)   1,176,707,072 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\bin\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\bin
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\bin\res\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\bin\res
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn
+
+11/11/2009  06:35 AM                86 all-wcprops
+11/11/2009  06:35 AM               237 entries
+11/11/2009  11:02 AM    <DIR>          prop-base
+11/11/2009  11:02 AM    <DIR>          props
+11/11/2009  11:02 AM    <DIR>          text-base
+11/11/2009  11:02 AM    <DIR>          tmp
+               2 File(s)            323 bytes
+               4 Dir(s)   1,176,707,072 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packBinOnly\test\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn
+
+11/11/2009  06:35 AM               184 all-wcprops
+11/11/2009  06:35 AM               466 entries
+11/11/2009  11:01 AM    <DIR>          prop-base
+11/11/2009  11:01 AM    <DIR>          props
+11/11/2009  11:01 AM    <DIR>          text-base
+11/11/2009  11:01 AM    <DIR>          tmp
+               2 File(s)            650 bytes
+               4 Dir(s)   1,176,707,072 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn
+
+11/11/2009  06:35 AM               412 all-wcprops
+11/11/2009  06:35 AM               694 entries
+11/11/2009  11:01 AM    <DIR>          prop-base
+11/11/2009  11:01 AM    <DIR>          props
+11/11/2009  11:01 AM    <DIR>          text-base
+11/11/2009  11:01 AM    <DIR>          tmp
+               2 File(s)          1,106 bytes
+               4 Dir(s)   1,176,707,072 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\binOnly\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn
+
+11/11/2009  06:35 AM               238 all-wcprops
+11/11/2009  06:35 AM               413 entries
+11/11/2009  11:01 AM    <DIR>          prop-base
+11/11/2009  11:01 AM    <DIR>          props
+11/11/2009  11:01 AM    <DIR>          text-base
+11/11/2009  11:01 AM    <DIR>          tmp
+               2 File(s)            651 bytes
+               4 Dir(s)   1,176,707,072 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-single\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn
+
+11/11/2009  06:35 AM                92 all-wcprops
+11/11/2009  06:35 AM               274 entries
+11/11/2009  11:01 AM    <DIR>          prop-base
+11/11/2009  11:01 AM    <DIR>          props
+11/11/2009  11:01 AM    <DIR>          text-base
+11/11/2009  11:01 AM    <DIR>          tmp
+               2 File(s)            366 bytes
+               4 Dir(s)   1,176,690,688 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn
+
+11/11/2009  06:34 AM               246 all-wcprops
+11/11/2009  06:34 AM               416 entries
+11/11/2009  11:01 AM    <DIR>          prop-base
+11/11/2009  11:01 AM    <DIR>          props
+11/11/2009  11:01 AM    <DIR>          text-base
+11/11/2009  11:01 AM    <DIR>          tmp
+               2 File(s)            662 bytes
+               4 Dir(s)   1,176,690,688 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\sprt-about\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn
+
+11/11/2009  06:35 AM             4,070 all-wcprops
+11/11/2009  06:35 AM             5,313 entries
+11/11/2009  11:01 AM    <DIR>          prop-base
+11/11/2009  11:01 AM    <DIR>          props
+11/11/2009  11:01 AM    <DIR>          text-base
+11/11/2009  11:01 AM    <DIR>          tmp
+               2 File(s)          9,383 bytes
+               4 Dir(s)   1,176,690,688 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\ms-vb6pack\Support\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn
+
+11/11/2009  06:35 AM                77 all-wcprops
+11/11/2009  06:35 AM               249 entries
+11/11/2009  11:01 AM    <DIR>          prop-base
+11/11/2009  11:01 AM    <DIR>          props
+11/11/2009  11:01 AM    <DIR>          text-base
+11/11/2009  11:01 AM    <DIR>          tmp
+               2 File(s)            326 bytes
+               4 Dir(s)   1,176,690,688 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn
+
+11/11/2009  06:35 AM               390 all-wcprops
+11/11/2009  06:35 AM               586 entries
+11/11/2009  11:01 AM    <DIR>          prop-base
+11/11/2009  11:01 AM    <DIR>          props
+11/11/2009  11:01 AM    <DIR>          text-base
+11/11/2009  11:01 AM    <DIR>          tmp
+               2 File(s)            976 bytes
+               4 Dir(s)   1,176,690,688 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\single_support\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\sprt-about\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\sprt-about
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\Support\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\Support
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\test\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\Package\test
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\packHelpers\single_support\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\packHelpers\single_support
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\.svn
+
+11/11/2009  06:45 AM             2,135 all-wcprops
+11/11/2009  06:45 AM             3,541 entries
+11/11/2009  11:02 AM    <DIR>          prop-base
+11/11/2009  11:02 AM    <DIR>          props
+11/11/2009  11:02 AM    <DIR>          text-base
+11/11/2009  11:02 AM    <DIR>          tmp
+               2 File(s)          5,676 bytes
+               4 Dir(s)   1,176,657,920 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn
+
+11/11/2009  06:35 AM               616 all-wcprops
+11/11/2009  06:35 AM             1,013 entries
+11/11/2009  11:02 AM    <DIR>          prop-base
+11/11/2009  11:02 AM    <DIR>          props
+11/11/2009  11:02 AM    <DIR>          text-base
+11/11/2009  11:02 AM    <DIR>          tmp
+               2 File(s)          1,629 bytes
+               4 Dir(s)   1,176,657,920 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\dde\.svn\tmp\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn
+
+11/11/2009  06:35 AM               562 all-wcprops
+11/11/2009  06:35 AM             1,020 entries
+11/11/2009  11:02 AM    <DIR>          prop-base
+11/11/2009  11:02 AM    <DIR>          props
+11/11/2009  11:02 AM    <DIR>          text-base
+11/11/2009  11:02 AM    <DIR>          tmp
+               2 File(s)          1,582 bytes
+               4 Dir(s)   1,176,657,920 bytes free
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\text-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\tmp\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\tmp
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\tmp\prop-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\tmp\prop-base
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\tmp\props\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\tmp\props
+
+
+D:\prog\vb\minuteAlarm\g\mt2>dir D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\tmp\text-base\.svn 
+ Volume in drive D is prog
+ Volume Serial Number is 805D-18EC
+
+ Directory of D:\prog\vb\minuteAlarm\g\mt2\src\res\.svn\tmp\text-base
+
