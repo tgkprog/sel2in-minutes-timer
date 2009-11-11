@@ -298,6 +298,9 @@ Begin VB.Form Form1
       Begin VB.Menu mnuUnInstall 
          Caption         =   "Uninsall"
       End
+      Begin VB.Menu mnuUnsinstallAll 
+         Caption         =   "Uninstall From Installer"
+      End
       Begin VB.Menu mnuAbout 
          Caption         =   "&About"
       End
@@ -602,14 +605,21 @@ Debug.Print "link open"
 End Sub
 
 Sub initHelp()
-Dim fso As FileSystemObject
+'Dim fso As FileSystemObject
 Dim fl1 As Folder, fldr2 As Folder
 Dim File1 As File, file2 As File
 Dim i, fnd As Integer
 Dim tx As TextStream
+On Local Error Resume Next
+
+
+If Not fso.FileExists(App.Path & "\ST6UNST.LOG") Then
+    mnuUnsinstallAll.Enabled = False
+End If
+
 On Local Error GoTo errh
 sHelpText = ""
-Set fso = New FileSystemObject
+''Set fso = New FileSystemObject
 Set tx = fso.OpenTextFile(App.Path & "\res\help.txt", ForReading)
 
 sHelpText = tx.ReadAll
@@ -626,6 +636,7 @@ End Sub
 Private Sub Form_Load()
 
 On Local Error Resume Next
+Set fso = New FileSystemObject
 Form1.LinkTopic = "MinutesTimer|cmds"
 Me.Text2.LinkItem = "t2"
 Me.Text2.LinkMode = 2
@@ -934,6 +945,24 @@ End Sub
 Private Sub mnuHelpWebHtml_Click()
 On Local Error Resume Next
 Me.htmlLaunch "http://code.google.com/p/sel2in-minutes-timer/w/list", ""
+End Sub
+
+Private Sub mnuUnsinstallAll_Click()
+''On Local Error GoTo errh
+Dim s, i, k, fl As Folder, fil As File
+
+
+
+If fso.FileExists(App.Path & "\ST6UNST.LOG") Then
+i = MsgBox("Uninstall Windows Installation ? Press No to stop, Yes to continue" _
+    , vbYesNo, APP_CAPTION & " Uninstall")
+    If i = vbCancel Then Exit Sub
+    Shell "C:\\WINDOWS\\st6unst.exe -n \""" & App.Path & "\ST6UNST.LOG""  "
+    End
+Else
+    mnuUnInstall_Click
+End If
+
 End Sub
 
 Private Sub mnuWebsite_Click()
