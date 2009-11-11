@@ -640,7 +640,7 @@ End If
 End Sub
 
 Private Sub Form_Load()
-
+Me.mnuDebugTop.Visible = False
 On Local Error Resume Next
 Set fso = New FileSystemObject
 Form1.LinkTopic = "MinutesTimer|cmds"
