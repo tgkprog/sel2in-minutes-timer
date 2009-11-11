@@ -301,6 +301,12 @@ Begin VB.Form Form1
       Begin VB.Menu mnuUnsinstallAll 
          Caption         =   "Uninstall From Installer"
       End
+      Begin VB.Menu mnuDebugTop 
+         Caption         =   "Debug"
+         Begin VB.Menu mnuDebug1 
+            Caption         =   "Debug"
+         End
+      End
       Begin VB.Menu mnuAbout 
          Caption         =   "&About"
       End
@@ -722,6 +728,10 @@ If Err.Number <> 0 Then
 errh:
     MsgBox "Sorry, could not set clipboard, had a problem " & Err.Description, vbExclamation, APP_CAPTION & " Err#" & Err.Number
 End If
+End Sub
+
+Private Sub mnuDebug1_Click()
+MsgBox "app is production no debug values"
 End Sub
 
 Private Sub mnuDonation_Click()

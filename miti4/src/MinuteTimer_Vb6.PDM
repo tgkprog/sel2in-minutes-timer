@@ -1,0 +1,412 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|min timer 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\prog\vb\minuteAlarm\g\miti4\packHelpers\Package
+
+[Package|min timer 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|min timer 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|min timer 1|Files Found]
+
+[Package|min timer 1|Files Released]
+
+[Package|min timer 1|Missing Dependency Information]
+C:\WINDOWS\system32\wshom.ocx=
+C:\WINDOWS\system32\wininet.dll=
+
+[Package|min timer 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|min timer 1|Files Added]
+d:\prog\vb\minutealarm\g\miti4\src\e-mail_developer.bat=
+d:\prog\vb\minutealarm\g\miti4\src\minutes_alarm_website.bat=
+d:\prog\vb\minutealarm\g\miti4\src\a.wav=
+d:\prog\vb\minutealarm\g\miti4\src\nl.wav=
+d:\prog\vb\minutealarm\g\miti4\src\b.wav=
+d:\prog\vb\minutealarm\g\miti4\src\res\tmr1.ico=
+d:\prog\vb\minutealarm\g\miti4\src\res\tmr3.ico=
+d:\prog\vb\minutealarm\g\miti4\src\res\tmr2.ico=
+d:\prog\vb\minutealarm\g\miti4\src\minute_timer.html=
+
+[Package|min timer 1|Files Removed]
+
+[Package|min timer 1|Files In Project]
+D:\prog\vb\minuteAlarm\g\miti4\bin\MinutesTimer_Vb6.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\wininet.dll=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\WINDOWS\system32\wshom.ocx=Yes
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\e-Mail_Developer.bat=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\Minutes_Alarm_Website.bat=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\a.wav=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\nl.wav=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\b.wav=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr1.ico=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr3.ico=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr2.ico=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\Minute_Timer.html=Yes
+
+[Package|min timer 1|Configure Registry Files]
+Applicable=No
+
+[Package|min timer 1|Configure Remote Servers]
+Applicable=No
+
+[Package|min timer 1|Install Locations]
+D:\prog\vb\minuteAlarm\g\miti4\bin\MinutesTimer_Vb6.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\wininet.dll=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\wshom.ocx=$(WinSysPath)
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\prog\vb\minuteAlarm\g\miti4\src\e-Mail_Developer.bat=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\Minutes_Alarm_Website.bat=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\a.wav=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\nl.wav=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\b.wav=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr1.ico=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr3.ico=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr2.ico=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\Minute_Timer.html=$(AppPath)
+
+[Package|min timer 1|Configure Shared Files]
+Applicable=Yes
+D:\prog\vb\minuteAlarm\g\miti4\bin\MinutesTimer_Vb6.exe=No
+D:\prog\vb\minuteAlarm\g\miti4\src\e-Mail_Developer.bat=No
+D:\prog\vb\minuteAlarm\g\miti4\src\Minutes_Alarm_Website.bat=No
+D:\prog\vb\minuteAlarm\g\miti4\src\a.wav=No
+D:\prog\vb\minuteAlarm\g\miti4\src\nl.wav=No
+D:\prog\vb\minuteAlarm\g\miti4\src\b.wav=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr1.ico=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr3.ico=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr2.ico=No
+D:\prog\vb\minuteAlarm\g\miti4\src\Minute_Timer.html=No
+
+[Package|min timer 1|Distribution]
+Type=single
+Size=
+Title=Minutes Timer - sel2in.com
+
+[Package|min timer 1|Package]
+PackageFolder=D:\prog\vb\minuteAlarm\g\miti4\Package
+ProjectFolder=D:\prog\vb\minuteAlarm\g\miti4\src
+ServerSideCab=
+File1=D:\prog\vb\minuteAlarm\g\miti4\Package\setup.exe
+File2=D:\prog\vb\minuteAlarm\g\miti4\Package\Setup.Lst
+File3=D:\prog\vb\minuteAlarm\g\miti4\Package\MinutesTimer_Vb6.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|min timer 1|IconGroups]
+Group0=apps
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|min timer 1|apps]
+Icon1=MinutesTimer_Vb6.exe
+Title1=Minutes Timer - Reminders
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|min timer 2|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\prog\vb\minuteAlarm\g\miti4\Package
+
+[Package|min timer 2|Configure DAO ISAMs]
+Applicable=No
+
+[Package|min timer 2|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|min timer 2|Files Found]
+
+[Package|min timer 2|Files Released]
+
+[Package|min timer 2|Missing Dependency Information]
+C:\WINDOWS\system32\wshom.ocx=
+C:\WINDOWS\system32\wininet.dll=
+
+[Package|min timer 2|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|min timer 2|Files Added]
+d:\prog\vb\minutealarm\g\miti4\src\e-mail_developer.bat=
+d:\prog\vb\minutealarm\g\miti4\src\minutes_alarm_website.bat=
+d:\prog\vb\minutealarm\g\miti4\src\a.wav=
+d:\prog\vb\minutealarm\g\miti4\src\nl.wav=
+d:\prog\vb\minutealarm\g\miti4\src\b.wav=
+d:\prog\vb\minutealarm\g\miti4\src\res\tmr1.ico=
+d:\prog\vb\minutealarm\g\miti4\src\res\tmr3.ico=
+d:\prog\vb\minutealarm\g\miti4\src\res\tmr2.ico=
+d:\prog\vb\minutealarm\g\miti4\src\minute_timer.html=
+
+[Package|min timer 2|Files Removed]
+
+[Package|min timer 2|Files In Project]
+D:\prog\vb\minuteAlarm\g\miti4\bin\MinutesTimer_Vb6.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\wininet.dll=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\WINDOWS\system32\wshom.ocx=Yes
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\e-Mail_Developer.bat=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\Minutes_Alarm_Website.bat=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\a.wav=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\nl.wav=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\b.wav=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr1.ico=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr3.ico=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr2.ico=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\Minute_Timer.html=Yes
+
+[Package|min timer 2|Configure Registry Files]
+Applicable=No
+
+[Package|min timer 2|Configure Remote Servers]
+Applicable=No
+
+[Package|min timer 2|Install Locations]
+D:\prog\vb\minuteAlarm\g\miti4\bin\MinutesTimer_Vb6.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\wininet.dll=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\wshom.ocx=$(WinSysPath)
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\prog\vb\minuteAlarm\g\miti4\src\e-Mail_Developer.bat=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\Minutes_Alarm_Website.bat=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\a.wav=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\nl.wav=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\b.wav=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr1.ico=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr3.ico=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr2.ico=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\Minute_Timer.html=$(AppPath)\res
+
+[Package|min timer 2|Configure Shared Files]
+Applicable=Yes
+D:\prog\vb\minuteAlarm\g\miti4\bin\MinutesTimer_Vb6.exe=No
+D:\prog\vb\minuteAlarm\g\miti4\src\e-Mail_Developer.bat=No
+D:\prog\vb\minuteAlarm\g\miti4\src\Minutes_Alarm_Website.bat=No
+D:\prog\vb\minuteAlarm\g\miti4\src\a.wav=No
+D:\prog\vb\minuteAlarm\g\miti4\src\nl.wav=No
+D:\prog\vb\minuteAlarm\g\miti4\src\b.wav=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr1.ico=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr3.ico=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr2.ico=No
+D:\prog\vb\minuteAlarm\g\miti4\src\Minute_Timer.html=No
+
+[Package|min timer 2|Distribution]
+Type=single
+Size=
+Title=Minutes Timer - sel2in.com
+
+[Package|min timer 2|Package]
+PackageFolder=D:\prog\vb\minuteAlarm\g\miti4\Package
+ProjectFolder=D:\prog\vb\minuteAlarm\g\miti4\src
+ServerSideCab=
+File1=D:\prog\vb\minuteAlarm\g\miti4\Package\setup.exe
+File2=D:\prog\vb\minuteAlarm\g\miti4\Package\Setup.Lst
+File3=D:\prog\vb\minuteAlarm\g\miti4\Package\MinutesTimer_Vb6.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|min timer 2|IconGroups]
+Group0=apps
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|min timer 2|apps]
+Icon1=MinutesTimer_Vb6.exe
+Title1=Minutes Timer - Reminders
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\prog\vb\minuteAlarm\g\miti4\Package
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\WINDOWS\system32\wshom.ocx=
+C:\WINDOWS\system32\wininet.dll=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|Standard Setup Package 1|Files Added]
+d:\prog\vb\minutealarm\g\miti4\src\res\a2.wav=
+d:\prog\vb\minutealarm\g\miti4\src\res\a.wav=
+d:\prog\vb\minutealarm\g\miti4\src\res\make-wav-copies.bat=
+d:\prog\vb\minutealarm\g\miti4\src\res\readme res.txt=
+d:\prog\vb\minutealarm\g\miti4\src\res\minute_timer.html=
+d:\prog\vb\minutealarm\g\miti4\src\res\e-mail_developer.bat=
+d:\prog\vb\minutealarm\g\miti4\src\res\minutes_alarm_donate_to_project.bat=
+d:\prog\vb\minutealarm\g\miti4\src\res\minutes_alarm_website.bat=
+d:\prog\vb\minutealarm\g\miti4\src\res\tmr1.ico=
+d:\prog\vb\minutealarm\g\miti4\src\res\tmr2.ico=
+d:\prog\vb\minutealarm\g\miti4\src\res\tmr3.ico=
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+D:\prog\vb\minuteAlarm\g\miti4\bin\MinutesTimer_Vb6.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\wininet.dll=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\WINDOWS\system32\wshom.ocx=Yes
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\a2.wav=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\a.wav=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\make-wav-copies.bat=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\readme res.txt=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\Minute_Timer.html=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\e-Mail_Developer.bat=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\Minutes_Alarm_Donate_To_Project.bat=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\Minutes_Alarm_Website.bat=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr1.ico=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr2.ico=Yes
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr3.ico=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+D:\prog\vb\minuteAlarm\g\miti4\bin\MinutesTimer_Vb6.exe=$(AppPath)\
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\wininet.dll=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\wshom.ocx=$(WinSysPath)
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\prgFiles\Microsoft_VS6\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\prog\vb\minuteAlarm\g\miti4\src\res\a2.wav=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\a.wav=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\make-wav-copies.bat=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\readme res.txt=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\Minute_Timer.html=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\e-Mail_Developer.bat=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\Minutes_Alarm_Donate_To_Project.bat=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\Minutes_Alarm_Website.bat=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr1.ico=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr2.ico=$(AppPath)\res
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr3.ico=$(AppPath)\res
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+D:\prog\vb\minuteAlarm\g\miti4\bin\MinutesTimer_Vb6.exe=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\a2.wav=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\a.wav=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\make-wav-copies.bat=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\readme res.txt=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\Minute_Timer.html=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\e-Mail_Developer.bat=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\Minutes_Alarm_Donate_To_Project.bat=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\Minutes_Alarm_Website.bat=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr1.ico=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr2.ico=No
+D:\prog\vb\minuteAlarm\g\miti4\src\res\tmr3.ico=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=Minutes Timer Reminders by Sel2in
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=D:\prog\vb\minuteAlarm\g\miti4\packHelpers\Package
+ProjectFolder=D:\prog\vb\minuteAlarm\g\miti4\src
+ServerSideCab=
+File1=D:\prog\vb\minuteAlarm\g\miti4\packHelpers\Package\setup.exe
+File2=D:\prog\vb\minuteAlarm\g\miti4\packHelpers\Package\Setup.Lst
+File3=D:\prog\vb\minuteAlarm\g\miti4\packHelpers\Package\MinutesTimer_Vb6.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=apps
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|apps]
+Icon1=MinutesTimer_Vb6.exe
+Title1=Minutes Timer Reminders
+StartIn1=$(AppPath)
+Key1=Icon4
+Icon2=MinutesTimer_Vb6.exe /uninstall
+Title2=Uninstall Minutes Timer
+StartIn2=$(AppPath)
+Key2=Icon6
