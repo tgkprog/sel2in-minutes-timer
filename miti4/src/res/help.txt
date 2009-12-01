@@ -1,0 +1,15 @@
+ ~ * Simple applicatin to get a reminder.
+ ~ * Enter time in minutes in the first text box (whole number 1 to 32000) and click On. Info shows when the alarm was started and how many minutes.
+ ~ * If sound is checked then plays sound files from your app folder or windows folder
+ ~ * Can use the second text box for any reminder text. Menu options allow you to save and load the reminder.
+ ~ * Other menu options to visit the web site, make a donation, and email developer (via your email client)
+ ~ * Picks up upto 4 sound files from application folder :G:\prog\vb\minsTmr\g\h\miti4\src\res\  to use as reminder sound. Keep copies to use same. If there are less than 4, takes the rest from the windows folder C:\WINDOWS
+
+2009 June
+ ~ * Can use the last text box to run a program like  C:\WINDOWS\system32\notepad.exe c:\todo.txt when alarm rings.
+ ~ * If Repeat box is checked then the timer reset when you turn it off or it times out while 'ringing'. If you press Off when its not ringing it cancels the timer,  even if repeat is checked.
+ ~ * new sync mode -f on then in repeat mode time intervals are relative to clock and time started (and not when alarm is dismissed 'off').
+
+
+2009 Dec New 
+~ *  new sync mode -f on then in repeat mode time intervals are relative to clock and time started (and not when alarm is dismissed 'off')

@@ -4,18 +4,18 @@ Begin VB.Form Form2
    BackColor       =   &H80000005&
    BorderStyle     =   4  'Fixed ToolWindow
    Caption         =   "Help"
-   ClientHeight    =   7035
+   ClientHeight    =   7215
    ClientLeft      =   150
    ClientTop       =   420
-   ClientWidth     =   9720
+   ClientWidth     =   10905
    Icon            =   "Form2.frx":0000
    LinkTopic       =   "Form2"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   7035
-   ScaleWidth      =   9720
+   ScaleHeight     =   7215
+   ScaleWidth      =   10905
    ShowInTaskbar   =   0   'False
-   StartUpPosition =   1  'CenterOwner
+   StartUpPosition =   2  'CenterScreen
    Begin VB.CommandButton Command1 
       Caption         =   "Command1"
       Height          =   255
@@ -28,7 +28,7 @@ Begin VB.Form Form2
       Appearance      =   0  'Flat
       BorderStyle     =   0  'None
       Height          =   6735
-      Left            =   0
+      Left            =   15
       Locked          =   -1  'True
       MultiLine       =   -1  'True
       TabIndex        =   1
@@ -56,7 +56,11 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private Sub Form_Load()
-Me.Height = 4755
+Me.Height = 5455
+Text1.Top = 20
+Text1.Left = 20
+Text1.Height = Me.Height - 200
+Text1.Width = Me.Width - 50
 End Sub
 
 Private Sub mnuClose_Click()
