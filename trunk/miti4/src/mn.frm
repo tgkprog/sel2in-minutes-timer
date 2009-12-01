@@ -8,6 +8,7 @@ Begin VB.Form Form1
    ClientWidth     =   3975
    Icon            =   "mn.frx":0000
    LinkTopic       =   "Form1"
+   LockControls    =   -1  'True
    ScaleHeight     =   190
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   265
@@ -226,6 +227,10 @@ Begin VB.Form Form1
          Caption         =   "&Off"
          Shortcut        =   ^F
       End
+      Begin VB.Menu mnuSncMode 
+         Caption         =   "Sync mode"
+         Checked         =   -1  'True
+      End
       Begin VB.Menu mnuSounds 
          Caption         =   "Choose S&ound"
       End
@@ -321,6 +326,10 @@ Attribute VB_Exposed = False
 ' moving from http://sourceforge.net/ to http://code.google.com/p/sel2in-minutes-timer/
 Option Explicit
 Public sHelpText As String
+Dim dtStart As Date
+Dim dtEnd As Date
+
+
 Dim bUninstalling As Boolean
 Dim MY_ORIG_HT As Long
 Private Const APP_CAPTION As String = "Mintues Timer "
@@ -338,6 +347,72 @@ Dim iSndFileCntr  As Integer
 Dim sRngFile As String
 
 
+Sub alarmOnSyncCheck(bAuto As Boolean)
+If bAuto Then
+    dtStart = DateAdd("n", txtMinutes, dtStart)
+    dtStart = DateAdd("s", txtSeconds, dtStart)
+Else
+    dtStart = Now
+End If
+Print dtEnd = DateAdd("n", txtMinutes, dtStart)
+dtEnd = DateAdd("s", txtSeconds, dtEnd)
+End Sub
+
+Sub alarmOn1(bAuto As Boolean)
+Timer1.Enabled = False
+Timer2.Enabled = False
+txtMinutes = Val(txtMinutes)
+txtSeconds = Val(txtSeconds)
+If (txtMinutes < 0) Then txtMinutes = 1
+If (txtSeconds < 0) Then txtSeconds = 1
+If txtMinutes = 0 And txtSeconds = 0 Then txtSeconds = 25
+
+iMins = Val(txtMinutes) - 1
+iSecs = Val(txtSeconds) - 1
+iStat = AppStatus_ALARM_ON
+
+
+Dim sMinsMsg
+Dim sSecsMsg
+
+sMinsMsg = (iMins + 1) '& ' iSecs seconds
+Timer1.Interval = 60000 ' timer for mins and seconds
+If iMins = -1 Then
+    sMinsMsg = ""
+    Timer1.Interval = 1000 'only seconds
+    'iMins = 0 'bug for timer fix later with a mode int?
+ElseIf iMins = 0 Then
+    sMinsMsg = "1 minute "
+Else
+    
+    sMinsMsg = (iMins + 1) & " minutes "
+End If
+
+If iSecs = -1 Then
+    sSecsMsg = ""
+ElseIf iSecs = 0 Then
+    sSecsMsg = "1 second "
+Else
+    sSecsMsg = (iSecs + 1) & " seconds "
+End If
+Dim dt1 As Date
+dt1 = Now
+Label1 = "At " & Format(dt1, "hh:nn:ss") & " hrs timer for " & sMinsMsg & sSecsMsg & "started "
+Dim sSep2
+sSep2 = "with"
+If chkSnd.Value Then
+    Label1 = Label1 & "with sound "
+    sSep2 = "&&"
+End If
+If chkRepeat.Value Then
+    Label1 = Label1 & sSep2 & " repeat on"
+End If
+Label2 = (iMins + 1) & " " & (iSecs + 1)
+Timer1.Enabled = True
+Icon = Form2.Icon ' press on while ringing
+
+'alarmOnSyncCheck False
+End Sub
 
 Sub wrFile(f As String, d As String)
 Dim fs As New FileSystemObject
@@ -388,61 +463,16 @@ getHelpText = " ~ * Simple applicatin to get a reminder." & vbNewLine _
     & " ~ * If sound is checked then plays sound files from your app folder or windows folder" & vbNewLine _
     & " ~ * Can use the second text box for any reminder text. Menu options allow you to save and load the reminder." & vbNewLine _
     & " ~ * Other menu options to visit the web site, make a donation, and email developer (via your email client)" & vbNewLine _
-    & " ~ * New: Picks up upto 4 sound files from application folder :" & App.Path & "\res\  to use as reminder sound. Keep copies to use same. If there are less than 4, takes the rest from the windows folder " & Environ("windir") & vbNewLine _
-    & " ~ * New: Can use the last text box to run a program like  " & Environ("windir") & "\system32\notepad.exe c:\todo.txt when alarm rings." & vbNewLine _
-    & " ~ * New: If Repeat box is checked then the timer reset when you turn it off or it times out while 'ringing'. If you press Off when its not ringing it cancels the timer,  even if repeat is checked."
+    & " ~ * * Picks up upto 4 sound files from application folder :" & App.Path & "\res\  to use as reminder sound. Keep copies to use same. If there are less than 4, takes the rest from the windows folder " & Environ("windir") & vbNewLine _
+    & " ~ * *  Can use the last text box to run a program like  " & Environ("windir") & "\system32\notepad.exe c:\todo.txt when alarm rings." & vbNewLine _
+    & " ~ *  If Repeat box is checked then the timer reset when you turn it off or it times out while 'ringing'. If you press Off when its not ringing it cancels the timer,  even if repeat is checked." & vbNewLine _
+    & " ~ *  new sync mode -f on then in repeat mode time intervals are relative to clock and time started (and not when alarm is dismissed 'off')." & vbNewLine '_
 End Function
 
 Private Sub cmdOn_Click()
 On Local Error GoTo errh
-Timer1.Enabled = False
-Timer2.Enabled = False
-txtMinutes = Val(txtMinutes)
-txtSeconds = Val(txtSeconds)
-If (txtMinutes < 0) Then txtMinutes = 1
-If (txtSeconds < 0) Then txtSeconds = 1
-If txtMinutes = 0 And txtSeconds = 0 Then txtSeconds = 25
-iMins = Val(txtMinutes) - 1
-iSecs = Val(txtSeconds) - 1
-iStat = AppStatus_ALARM_ON
-Dim sMinsMsg
-Dim sSecsMsg
-
-sMinsMsg = (iMins + 1) '& ' iSecs seconds
-Timer1.Interval = 60000 ' timer for mins and seconds
-If iMins = -1 Then
-    sMinsMsg = ""
-    Timer1.Interval = 1000 'only seconds
-    'iMins = 0 'bug for timer fix later with a mode int?
-ElseIf iMins = 0 Then
-    sMinsMsg = "1 minute "
-Else
-    
-    sMinsMsg = (iMins + 1) & " minutes "
-End If
-
-If iSecs = -1 Then
-    sSecsMsg = ""
-ElseIf iSecs = 0 Then
-    sSecsMsg = "1 second "
-Else
-    sSecsMsg = (iSecs + 1) & " seconds "
-End If
-Dim dt1 As Date
-dt1 = Now
-Label1 = "At " & Format(dt1, "hh:nn:ss") & " hrs timer for " & sMinsMsg & sSecsMsg & "started "
-Dim sSep2
-sSep2 = "with"
-If chkSnd.Value Then
-    Label1 = Label1 & "with sound "
-    sSep2 = "&&"
-End If
-If chkRepeat.Value Then
-    Label1 = Label1 & sSep2 & " repeat on"
-End If
-Label2 = (iMins + 1) & " " & (iSecs + 1)
-Timer1.Enabled = True
-Icon = Form2.Icon ' press on while ringing
+alarmOn1 True
+alarmOnSyncCheck False
 Err.Clear
 If Err.Number <> 0 Then
 errh:
@@ -808,6 +838,7 @@ On Local Error Resume Next
 sRngFile = GetSetting(App.EXEName, "Set", "rngFile")
 chkSnd.Value = GetSetting(App.EXEName, "Set", "soundEnabled")
 chkRepeat.Value = GetSetting(App.EXEName, "Set", "repeat")
+mnuSncMode.Checked = GetSetting(App.EXEName, "Set", "sync", mnuSncMode.Checked)
 mnuLoadRem_Click
 End Sub
 
@@ -815,8 +846,8 @@ Private Sub mnuLoadRem_Click()
 On Local Error Resume Next
 Me.Text2 = GetSetting(App.EXEName, "Set", "rem", Me.Text2)
 txtShell = GetSetting(App.EXEName, "Set", "shl", txtShell)
-txtMinutes = GetSetting(App.EXEName, "Set", "time", txtMinutes)
-txtSeconds = GetSetting(App.EXEName, "Set", "time-seconds", txtSeconds)
+txtMinutes.Text = GetSetting(App.EXEName, "Set", "time", txtMinutes.Text)
+txtSeconds.Text = GetSetting(App.EXEName, "Set", "time-seconds", txtSeconds.Text)
 End Sub
 
 Private Sub mnuMoreCompact_Click()
@@ -839,6 +870,7 @@ mnuSaveRem_Click
 Call SaveSetting(App.EXEName, "Set", "rngFile", sRngFile)
 Call SaveSetting(App.EXEName, "Set", "soundEnabled", chkSnd.Value)
 Call SaveSetting(App.EXEName, "Set", "repeat", chkRepeat.Value)
+Call SaveSetting(App.EXEName, "Set", "sync", mnuSncMode.Checked)
 
 
 Err.Clear
@@ -850,10 +882,14 @@ End If
 End Sub
 
 Private Sub mnuSaveRem_Click()
-Call GetSetting(App.EXEName, "Set", "time-seconds", txtSeconds)
+Call SaveSetting(App.EXEName, "Set", "time-seconds", txtSeconds.Text)
 Call SaveSetting(App.EXEName, "Set", "time", txtMinutes)
 Call SaveSetting(App.EXEName, "Set", "rem", Me.Text2)
 Call SaveSetting(App.EXEName, "Set", "shl", Me.txtShell)
+End Sub
+
+Private Sub mnuSncMode_Click()
+mnuSncMode.Checked = Not mnuSncMode.Checked
 End Sub
 
 Private Sub mnuSounds_Click()
@@ -1002,6 +1038,10 @@ If iStat = AppStatus_ALARM_ON And iMins > 0 Then
     Label2 = iMins & " " & iSecs
     Exit Sub
 End If
+If dtEnd <= Now Then
+    iMins = 0
+    iSecs = 0
+End If
 If iStat = AppStatus_ALARM_ON And (iMins = 0 Or iSecs > 0) Then
     If iMins <= 0 Then
         If iSecs > 0 Then
@@ -1022,6 +1062,7 @@ If iStat = AppStatus_ALARM_ON And (iMins = 0 Or iSecs > 0) Then
         End If
         'Timer1.Interval = 1000
     End If
+    alarmOnSyncCheck True
     If txtShell <> "" Then
         On Error Resume Next
         Shell txtShell, vbNormalFocus
@@ -1030,6 +1071,7 @@ If iStat = AppStatus_ALARM_ON And (iMins = 0 Or iSecs > 0) Then
     iStat = 60
     'Timer1.Interval = 1000
     Label2 = "a"
+    
 Else
     If iStat > -1 Then
         Timer2.Enabled = True
@@ -1071,7 +1113,7 @@ Icon = Form2.Icon
 
 
 If chkRepeat.Value = 1 And (Timer2.Enabled Or bFromT) Then
-    cmdOn_Click
+    alarmOn1 False
 Else
     Timer1.Enabled = False
 End If
