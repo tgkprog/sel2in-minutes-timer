@@ -102,7 +102,7 @@ Begin VB.Form Form1
       End
       Begin VB.Timer Timer2 
          Enabled         =   0   'False
-         Interval        =   260
+         Interval        =   250
          Left            =   4320
          Top             =   240
       End
@@ -229,7 +229,6 @@ Begin VB.Form Form1
       End
       Begin VB.Menu mnuSncMode 
          Caption         =   "Sync mode"
-         Checked         =   -1  'True
       End
       Begin VB.Menu mnuSounds 
          Caption         =   "Choose S&ound"
@@ -250,6 +249,15 @@ Begin VB.Form Form1
       End
       Begin VB.Menu mnuLoadPrefs 
          Caption         =   "Reload all saved prefs"
+      End
+      Begin VB.Menu mnuDmyMoreSettings 
+         Caption         =   "More settings"
+         Begin VB.Menu mnuRingTime 
+            Caption         =   "Ring time in seconds"
+         End
+         Begin VB.Menu mnuSoundLoopDuration 
+            Caption         =   "Sound file duration in seconds"
+         End
       End
    End
    Begin VB.Menu mnuOther 
@@ -328,8 +336,9 @@ Option Explicit
 Public sHelpText As String
 Dim dtStart As Date
 Dim dtEnd As Date
-
-
+Dim iSoundFileLen As Double
+Dim iRingTimeSecs As Integer
+Dim iCurrRingTimeSecs As Integer
 Dim bUninstalling As Boolean
 Dim MY_ORIG_HT As Long
 Private Const APP_CAPTION As String = "Mintues Timer "
@@ -346,6 +355,29 @@ Dim snds(3) As String
 Dim iSndFileCntr  As Integer
 Dim sRngFile As String
 
+Sub alarmRing()
+alarmOnSyncCheck True
+Timer2.Enabled = True
+iCurrRingTimeSecs = iRingTimeSecs * 4
+iMins = 0
+iSecs = 0
+
+iStat = AppStatus_ALARM_RING
+Label2 = "a"
+If iCurrRingTimeSecs Mod 2 = 0 Then
+    Form1.Icon = Form2.Icon
+Else
+    Form1.Icon = Form3.Icon
+End If
+'If chkSnd.Value Then
+'    If sRngFile = "" Then
+'        Call PlaySound(snds(Abs(iCurrRingTimeSecs Mod 4)), 0, SND_FILENAME Or SND_ASYNC)
+'    Else
+'        Call PlaySound(sRngFile, 0, SND_FILENAME Or SND_ASYNC)
+'    End If
+'End If
+
+End Sub
 
 Sub alarmOnSyncCheck(bAuto As Boolean)
 If bAuto Then
@@ -354,13 +386,17 @@ If bAuto Then
 Else
     dtStart = Now
 End If
-Print dtEnd = DateAdd("n", txtMinutes, dtStart)
+
+dtEnd = DateAdd("n", txtMinutes, dtStart)
 dtEnd = DateAdd("s", txtSeconds, dtEnd)
+If bAuto And mnuSncMode.Checked Then
+    Debug.Print "Sync end " & dtEnd & " start " & dtStart
+End If
 End Sub
 
 Sub alarmOn1(bAuto As Boolean)
 Timer1.Enabled = False
-Timer2.Enabled = False
+'Timer2.Enabled = False
 txtMinutes = Val(txtMinutes)
 txtSeconds = Val(txtSeconds)
 If (txtMinutes < 0) Then txtMinutes = 1
@@ -471,6 +507,7 @@ End Function
 
 Private Sub cmdOn_Click()
 On Local Error GoTo errh
+Timer2.Enabled = False
 alarmOn1 True
 alarmOnSyncCheck False
 Err.Clear
@@ -482,6 +519,7 @@ End Sub
 
 Private Sub cmdOff_Click()
 On Local Error GoTo errh
+Timer2.Enabled = False
 If Timer1.Enabled Then
 
     Label2 = "off"
@@ -670,12 +708,14 @@ End If
 End Sub
 
 Private Sub Form_Load()
+dtEnd = Now
 Me.mnuDebugTop.Visible = False
 On Local Error Resume Next
 Set fso = New FileSystemObject
 Form1.LinkTopic = "MinutesTimer|cmds"
 Me.Text2.LinkItem = "t2"
 Me.Text2.LinkMode = 2
+iSoundFileLen = 3.5
 Form1.LinkMode = 2
 Call inetInit
 Call initHelp
@@ -835,6 +875,7 @@ End Sub
 
 Private Sub mnuLoadPrefs_Click()
 On Local Error Resume Next
+iRingTimeSecs = GetSetting(App.EXEName, "Set", "iRingTimeSecs", 45)
 sRngFile = GetSetting(App.EXEName, "Set", "rngFile")
 chkSnd.Value = GetSetting(App.EXEName, "Set", "soundEnabled")
 chkRepeat.Value = GetSetting(App.EXEName, "Set", "repeat")
@@ -864,6 +905,16 @@ On Local Error Resume Next
 cmdOn_Click
 End Sub
 
+Private Sub mnuRingTime_Click()
+On Local Error Resume Next
+iRingTimeSecs = InputBox("Enter time application should ""ring"" when alarm goes off", APP_CAPTION, iRingTimeSecs)
+iRingTimeSecs = Val(iRingTimeSecs)
+If iRingTimeSecs < 1 Then
+    MsgBox "Minimum ring time is 1 second, though you probably will not hear it ... reset to 1", vbOKOnly, APP_CAPTION
+    iRingTimeSecs = 1
+End If
+End Sub
+
 Private Sub mnuSaveAllPrefsDefalut_Click()
 On Local Error GoTo errh
 mnuSaveRem_Click
@@ -871,8 +922,7 @@ Call SaveSetting(App.EXEName, "Set", "rngFile", sRngFile)
 Call SaveSetting(App.EXEName, "Set", "soundEnabled", chkSnd.Value)
 Call SaveSetting(App.EXEName, "Set", "repeat", chkRepeat.Value)
 Call SaveSetting(App.EXEName, "Set", "sync", mnuSncMode.Checked)
-
-
+Call SaveSetting(App.EXEName, "Set", "iRingTimeSecs", iRingTimeSecs)
 Err.Clear
 If Err.Number <> 0 Then
 errh:
@@ -890,6 +940,12 @@ End Sub
 
 Private Sub mnuSncMode_Click()
 mnuSncMode.Checked = Not mnuSncMode.Checked
+End Sub
+
+Private Sub mnuSoundLoopDuration_Click()
+On Local Error Resume Next
+iSoundFileLen = InputBox("Enter duration(seconds) to re-play sounds on alarm, if more than alarm time than will play only once", APP_CAPTION, iSoundFileLen)
+If iSoundFileLen < 1 Then iSoundFileLen = 1
 End Sub
 
 Private Sub mnuSounds_Click()
@@ -1038,9 +1094,9 @@ If iStat = AppStatus_ALARM_ON And iMins > 0 Then
     Label2 = iMins & " " & iSecs
     Exit Sub
 End If
-If dtEnd <= Now Then
-    iMins = 0
-    iSecs = 0
+If dtEnd <= Now And mnuSncMode.Checked And iStat = AppStatus_ALARM_ON Then
+    alarmRing
+    Exit Sub
 End If
 If iStat = AppStatus_ALARM_ON And (iMins = 0 Or iSecs > 0) Then
     If iMins <= 0 Then
@@ -1059,46 +1115,22 @@ If iStat = AppStatus_ALARM_ON And (iMins = 0 Or iSecs > 0) Then
                 Label2 = sLbl & " " & iSecs
                 Exit Sub
             End If
-        End If
+        End If ' timer int not 1000
         'Timer1.Interval = 1000
-    End If
-    alarmOnSyncCheck True
-    If txtShell <> "" Then
-        On Error Resume Next
-        Shell txtShell, vbNormalFocus
-    End If
-    On Local Error GoTo errh
-    iStat = 60
-    'Timer1.Interval = 1000
-    Label2 = "a"
-    
+        Exit Sub
+    End If ' seconds not yet 0
 Else
-    If iStat > -1 Then
-        Timer2.Enabled = True
-        iStat = iStat - 1
-        If iStat Mod 2 = 0 Then
-            Form1.Icon = Form2.Icon
-            
-        Else
-            Form1.Icon = Form3.Icon
+    If iStat = AppStatus_ALARM_ON Then
+        'alarm ring
+        If txtShell <> "" Then
+            On Error Resume Next
+            Shell txtShell, vbNormalFocus
         End If
-        If chkSnd.Value Then
-
-            If sRngFile = "" Then
-                Call PlaySound(snds(Abs(iStat Mod 4)), 0, SND_FILENAME Or SND_ASYNC)
-            Else
-                Call PlaySound(sRngFile, 0, SND_FILENAME Or SND_ASYNC)
-            End If
-        End If
-
-        
-    Else    'timed out
-        iStat = AppStatus_ALARM_TIMED_OUT
-        Timer1.Enabled = False
-        Label2 = "t"
-        alrmDone True
+        On Local Error GoTo errh
+        alarmRing
+        alarmOnSyncCheck True
     End If
-End If
+    End If
 Err.Clear
 If Err.Number <> 0 Then
 errh:
@@ -1117,12 +1149,14 @@ If chkRepeat.Value = 1 And (Timer2.Enabled Or bFromT) Then
 Else
     Timer1.Enabled = False
 End If
-
-Timer2.Enabled = False
+If Not bFromT Then
+    'Timer2.Enabled = False
+End If
 End Sub
 
 Private Sub Timer2_Timer()
 Static i As Integer
+
 i = i + 1
 'Image2.Visible = False
 If i = 1 Then
@@ -1139,7 +1173,32 @@ ElseIf i = 4 Then
     Image1.Top = Image1.Top - 15
     i = 0
 End If
+'  ringing mode
     
+If iCurrRingTimeSecs > 0 Then
+    
+        If iCurrRingTimeSecs Mod 2 = 0 Then
+            Form1.Icon = Form2.Icon
+        Else
+            Form1.Icon = Form3.Icon
+        End If
+        
+        If chkSnd.Value And ((iCurrRingTimeSecs * 250)) Mod (1000 * iSoundFileLen) = 0 Then
+            If sRngFile = "" Then
+                Call PlaySound(snds(Abs(iCurrRingTimeSecs Mod 4)), 0, SND_FILENAME Or SND_ASYNC)
+            Else
+                Call PlaySound(sRngFile, 0, SND_FILENAME Or SND_ASYNC)
+            End If
+        End If
+        iCurrRingTimeSecs = iCurrRingTimeSecs - 1
+    Else    'timed out
+        'iStat = AppStatus_ALARM_TIMED_OUT
+        Timer2.Enabled = False
+        Label2 = "t"
+        If iStat = AppStatus_ALARM_RING Then
+            alrmDone True
+        End If
+End If
 
 End Sub
 
