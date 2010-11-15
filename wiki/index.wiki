@@ -1,5 +1,7 @@
 #Minute Timer a timer with sounds and visual notification.
 
+Web version [http://sel2in.com/prjs/php/p8/MinutesTimer/MinutesTimerWeb.html sel2in web timer]
+
 = Minute Timer =
 
 Quick to set and use VB6 application to remind you. Simple applicatin to for a reminder.
